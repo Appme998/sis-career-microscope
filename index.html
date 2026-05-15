@@ -2428,14 +2428,79 @@ function doAnalyze(){
   var birthYear=parseInt(document.getElementById('by').value);
   var ziwei=getZiweiReading(z),numReading=getNumerologyReading(birthYear),tarot=getTarotReading(z),disc=getDISCReading(z),meihua=getMeihuaReading(a),qimen=getQimenReading(z);
   var wsSystems=[{id:'ziwei',label:'Star Blueprint™'},{id:'num',label:'Life Code™'},{id:'tarot',label:'Archetype Lens™'},{id:'disc',label:'Behavior Matrix™'},{id:'meihua',label:'Energy Gate™'},{id:'qimen',label:'Command Field™'}];
-  document.getElementById('ws-tabs').innerHTML=wsSystems.map(function(s,i){return '<button class="ws-tab'+(i===0?' act':'')+'" onclick="wsSwitch(''+s.id+'')" id="wstab-'+s.id+'">'+s.label+'</button>';}).join('');
+  document.getElementById('ws-tabs').innerHTML=wsSystems.map(function(s,i){return '<button class="ws-tab'+(i===0?' act':'')+'" onclick="wsSwitch(\"'+s.id+'\")" id="wstab-'+s.id+'">'+s.label+'</button>';}).join('');
+  // Build wisdom panels
+  function mkItem(label, val){ return '<div class="ws-item"><div class="tl">'+label+'</div><div class="tv">'+val+'</div></div>'; }
+  function mkRow(a,b){ return '<div class="ws-row">'+a+b+'</div>'; }
+  function mkHR(txt){ return '<div class="ws-hr">'+txt+'</div>'; }
+  function mkLabel(txt){ return '<div class="ws-label">'+txt+'</div>'; }
+  function mkArch(txt){ return '<div class="ws-arch">'+txt+'</div>'; }
+  function mkSub(txt){ return '<div class="ts" style="font-size:10px;color:var(--silver);margin-bottom:.5rem;">'+txt+'</div>'; }
+  function mkPanel(id, active, html){ return '<div class="ws-panel'+(active?' act':'')+'" id="wsp-'+id+'">'+html+'</div>'; }
+
   var panels='';
-  if(ziwei) panels+='<div class="ws-panel act" id="wsp-ziwei"><div class="ws-label">Star Blueprint™ · Career Archetype</div><div class="ws-arch">'+ziwei.star+' — '+ziwei.arch+'</div><div class="ts" style="font-size:10px;color:var(--silver);margin-bottom:.5rem;">Sis\'s Intelligence System · Career Architecture'</div><div class="ws-row"><div class="ws-item"><div class="tl">Core Strength</div><div class="tv">'+ziwei.s+'</div></div><div class="ws-item"><div class="tl">Blind Spot</div><div class="tv">'+ziwei.b+'</div></div></div><div class="ws-hr">'+ziwei.hr+'</div></div>';
-  var nd=numReading.data; panels+='<div class="ws-panel" id="wsp-num"><div class="ws-label">Life Code™ · Path Number '+numReading.num+'</div><div class="ws-arch">'+nd.path+'</div><div class="ws-row"><div class="ws-item"><div class="tl">Career Direction</div><div class="tv">'+nd.career+'</div></div><div class="ws-item"><div class="tl">Shadow Side</div><div class="tv">'+nd.shadow+'</div></div></div><div class="ws-item" style="margin:.4rem 0;"><div class="tl">Core Strength</div><div class="tv">'+nd.strength+'</div></div><div class="ws-hr">'+nd.hr+'</div></div>';
-  if(tarot) panels+='<div class="ws-panel" id="wsp-tarot"><div class="ws-label">Archetype Lens™ · '+tarot.card+'</div><div class="ws-arch">'+tarot.arch+'</div><div class="ws-row"><div class="ws-item"><div class="tl">Career Power</div><div class="tv">'+tarot.power+'</div></div><div class="ws-item"><div class="tl">Core Lesson</div><div class="tv">'+tarot.lesson+'</div></div></div><div class="ws-item" style="margin:.4rem 0;"><div class="tl">Career Direction</div><div class="tv">'+tarot.career+'</div></div><div class="ws-hr">'+tarot.hr+'</div></div>';
-  if(disc) panels+='<div class="ws-panel" id="wsp-disc"><div class="ws-label">Behavior Matrix™ · Work Style Profile</div><div class="ws-arch">'+disc.disc+'</div><div class="ts" style="font-size:10px;color:var(--silver);margin-bottom:.5rem;">Profile: '+disc.mbti+'</div><div class="ws-row"><div class="ws-item"><div class="tl">Work Style</div><div class="tv">'+disc.style+'</div></div><div class="ws-item"><div class="tl">Collaboration</div><div class="tv">'+disc.collab+'</div></div></div><div class="ws-row"><div class="ws-item"><div class="tl">How to Reach You</div><div class="tv">'+disc.receive+'</div></div><div class="ws-item"><div class="tl">Under Conflict</div><div class="tv">'+disc.conflict+'</div></div></div><div class="ws-hr">'+disc.hr+'</div></div>';
-  if(meihua) panels+='<div class="ws-panel" id="wsp-meihua"><div class="ws-label">Energy Gate™ · Elemental Positioning</div><div class="ws-arch">'+meihua.gua+' — '+meihua.name+'</div><div class="ws-row"><div class="ws-item"><div class="tl">Nature</div><div class="tv">'+meihua.nature+'</div></div><div class="ws-item"><div class="tl">Power Season</div><div class="tv">'+meihua.timing+'</div></div></div><div class="ws-item" style="margin:.4rem 0;"><div class="tl">Career Insight</div><div class="tv">'+meihua.career+'</div></div><div class="ws-hr">'+meihua.hr+'</div></div>';
-  if(qimen) panels+='<div class="ws-panel" id="wsp-qimen"><div class="ws-label">Command Field™ · Strategic Positioning</div><div class="ws-arch">'+qimen.gate+'</div><div class="ts" style="font-size:10px;color:var(--silver);margin-bottom:.5rem;">Strategic Positioning Intelligence'</div><div class="ws-row"><div class="ws-item"><div class="tl">Strategic Nature</div><div class="tv">'+qimen.nature+'</div></div><div class="ws-item"><div class="tl">Caution</div><div class="tv">'+qimen.caution+'</div></div></div><div class="ws-item" style="margin:.4rem 0;"><div class="tl">Career Strategy</div><div class="tv">'+qimen.strategy+'</div></div><div class="ws-hr">'+qimen.hr+'</div></div>';
+
+  // Panel 1: Star Blueprint™
+  if(ziwei){
+    var zHtml = mkLabel('Star Blueprint™ · Career Archetype') +
+      mkArch(ziwei.arch) +
+      mkSub('Career Intelligence System') +
+      mkRow(mkItem('Core Strength', ziwei.s), mkItem('Blind Spot', ziwei.b)) +
+      mkHR(ziwei.hr);
+    panels += mkPanel('ziwei', true, zHtml);
+  }
+
+  // Panel 2: Life Code™
+  var nd = numReading.data;
+  var nHtml = mkLabel('Life Code™ · Path Number ' + numReading.num) +
+    mkArch(nd.path) +
+    mkRow(mkItem('Career Direction', nd.career), mkItem('Shadow Side', nd.shadow)) +
+    mkItem('Core Strength', nd.strength) +
+    mkHR(nd.hr);
+  panels += mkPanel('num', false, nHtml);
+
+  // Panel 3: Archetype Lens™
+  if(tarot){
+    var tHtml = mkLabel('Archetype Lens™ · ' + tarot.card) +
+      mkArch(tarot.arch) +
+      mkRow(mkItem('Career Power', tarot.power), mkItem('Core Lesson', tarot.lesson)) +
+      mkItem('Career Direction', tarot.career) +
+      mkHR(tarot.hr);
+    panels += mkPanel('tarot', false, tHtml);
+  }
+
+  // Panel 4: Behavior Matrix™
+  if(disc){
+    var dHtml = mkLabel('Behavior Matrix™ · Work Style Profile') +
+      mkArch(disc.disc) +
+      mkSub('Profile: ' + disc.mbti) +
+      mkRow(mkItem('Work Style', disc.style), mkItem('Collaboration', disc.collab)) +
+      mkRow(mkItem('How to Reach You', disc.receive), mkItem('Under Conflict', disc.conflict)) +
+      mkHR(disc.hr);
+    panels += mkPanel('disc', false, dHtml);
+  }
+
+  // Panel 5: Energy Gate™
+  if(meihua){
+    var mHtml = mkLabel('Energy Gate™ · Elemental Positioning') +
+      mkArch(meihua.gua + ' — ' + meihua.name) +
+      mkRow(mkItem('Nature', meihua.nature), mkItem('Power Season', meihua.timing)) +
+      mkItem('Career Insight', meihua.career) +
+      mkHR(meihua.hr);
+    panels += mkPanel('meihua', false, mHtml);
+  }
+
+  // Panel 6: Command Field™
+  if(qimen){
+    var qHtml = mkLabel('Command Field™ · Strategic Positioning') +
+      mkArch(qimen.gate) +
+      mkSub('Strategic Positioning Intelligence') +
+      mkRow(mkItem('Strategic Nature', qimen.nature), mkItem('Caution', qimen.caution)) +
+      mkItem('Career Strategy', qimen.strategy) +
+      mkHR(qimen.hr);
+    panels += mkPanel('qimen', false, qHtml);
+  }
+
   document.getElementById('ws-content').innerHTML=panels;
   applyTier();
   document.getElementById('res-panel').style.display='block';

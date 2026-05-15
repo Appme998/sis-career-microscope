@@ -2428,14 +2428,79 @@ function doAnalyze(){
   var birthYear=parseInt(document.getElementById('by').value);
   var ziwei=getZiweiReading(z),numReading=getNumerologyReading(birthYear),tarot=getTarotReading(z),disc=getDISCReading(z),meihua=getMeihuaReading(a),qimen=getQimenReading(z);
   var wsSystems=[{id:'ziwei',label:'星途藍圖™'},{id:'num',label:'生命密碼™'},{id:'tarot',label:'原型透鏡™'},{id:'disc',label:'行為矩陣™'},{id:'meihua',label:'能量之門™'},{id:'qimen',label:'命令場™'}];
-  document.getElementById('ws-tabs').innerHTML=wsSystems.map(function(s,i){return '<button class="ws-tab'+(i===0?' act':'')+'" onclick="wsSwitch(''+s.id+'')" id="wstab-'+s.id+'">'+s.label+'</button>';}).join('');
+  document.getElementById('ws-tabs').innerHTML=wsSystems.map(function(s,i){return '<button class="ws-tab'+(i===0?' act':'')+'" onclick="wsSwitch(\"'+s.id+'\")" id="wstab-'+s.id+'">'+s.label+'</button>';}).join('');
+  // Build wisdom panels
+  function mkItem(label, val){ return '<div class="ws-item"><div class="tl">'+label+'</div><div class="tv">'+val+'</div></div>'; }
+  function mkRow(a,b){ return '<div class="ws-row">'+a+b+'</div>'; }
+  function mkHR(txt){ return '<div class="ws-hr">'+txt+'</div>'; }
+  function mkLabel(txt){ return '<div class="ws-label">'+txt+'</div>'; }
+  function mkArch(txt){ return '<div class="ws-arch">'+txt+'</div>'; }
+  function mkSub(txt){ return '<div class="ts" style="font-size:10px;color:var(--silver);margin-bottom:.5rem;">'+txt+'</div>'; }
+  function mkPanel(id, active, html){ return '<div class="ws-panel'+(active?' act':'')+'" id="wsp-'+id+'">'+html+'</div>'; }
+
   var panels='';
-  if(ziwei) panels+='<div class="ws-panel act" id="wsp-ziwei"><div class="ws-label">星途藍圖™ · 職場原型</div><div class="ws-arch">'+ziwei.star+' — '+ziwei.arch+'</div><div class="ts" style="font-size:10px;color:var(--silver);margin-bottom:.5rem;">Sis\'s Intelligence System · Career Architecture'</div><div class="ws-row"><div class="ws-item"><div class="tl">核心優勢</div><div class="tv">'+ziwei.s+'</div></div><div class="ws-item"><div class="tl">盲點</div><div class="tv">'+ziwei.b+'</div></div></div><div class="ws-hr">'+ziwei.hr+'</div></div>';
-  var nd=numReading.data; panels+='<div class="ws-panel" id="wsp-num"><div class="ws-label">生命密碼™ · 生命數字 '+numReading.num+'</div><div class="ws-arch">'+nd.path+'</div><div class="ws-row"><div class="ws-item"><div class="tl">職涯方向</div><div class="tv">'+nd.career+'</div></div><div class="ws-item"><div class="tl">陰影面</div><div class="tv">'+nd.shadow+'</div></div></div><div class="ws-item" style="margin:.4rem 0;"><div class="tl">核心優勢</div><div class="tv">'+nd.strength+'</div></div><div class="ws-hr">'+nd.hr+'</div></div>';
-  if(tarot) panels+='<div class="ws-panel" id="wsp-tarot"><div class="ws-label">原型透鏡™ · '+tarot.card+'</div><div class="ws-arch">'+tarot.arch+'</div><div class="ws-row"><div class="ws-item"><div class="tl">職場力量</div><div class="tv">'+tarot.power+'</div></div><div class="ws-item"><div class="tl">核心功課</div><div class="tv">'+tarot.lesson+'</div></div></div><div class="ws-item" style="margin:.4rem 0;"><div class="tl">職涯方向</div><div class="tv">'+tarot.career+'</div></div><div class="ws-hr">'+tarot.hr+'</div></div>';
-  if(disc) panels+='<div class="ws-panel" id="wsp-disc"><div class="ws-label">行為矩陣™ · 工作風格檔案</div><div class="ws-arch">'+disc.disc+'</div><div class="ts" style="font-size:10px;color:var(--silver);margin-bottom:.5rem;">Profile: '+disc.mbti+'</div><div class="ws-row"><div class="ws-item"><div class="tl">工作風格</div><div class="tv">'+disc.style+'</div></div><div class="ws-item"><div class="tl">協作方式</div><div class="tv">'+disc.collab+'</div></div></div><div class="ws-row"><div class="ws-item"><div class="tl">如何與你溝通</div><div class="tv">'+disc.receive+'</div></div><div class="ws-item"><div class="tl">衝突模式</div><div class="tv">'+disc.conflict+'</div></div></div><div class="ws-hr">'+disc.hr+'</div></div>';
-  if(meihua) panels+='<div class="ws-panel" id="wsp-meihua"><div class="ws-label">能量之門™ · 五行定位</div><div class="ws-arch">'+meihua.gua+' — '+meihua.name+'</div><div class="ws-row"><div class="ws-item"><div class="tl">天性特質</div><div class="tv">'+meihua.nature+'</div></div><div class="ws-item"><div class="tl">力量時機</div><div class="tv">'+meihua.timing+'</div></div></div><div class="ws-item" style="margin:.4rem 0;"><div class="tl">職場洞察</div><div class="tv">'+meihua.career+'</div></div><div class="ws-hr">'+meihua.hr+'</div></div>';
-  if(qimen) panels+='<div class="ws-panel" id="wsp-qimen"><div class="ws-label">命令場™ · 策略定位</div><div class="ws-arch">'+qimen.gate+'</div><div class="ts" style="font-size:10px;color:var(--silver);margin-bottom:.5rem;">策略定位 Intelligence'</div><div class="ws-row"><div class="ws-item"><div class="tl">Strategic 天性特質</div><div class="tv">'+qimen.nature+'</div></div><div class="ws-item"><div class="tl">提醒</div><div class="tv">'+qimen.caution+'</div></div></div><div class="ws-item" style="margin:.4rem 0;"><div class="tl">職涯策略</div><div class="tv">'+qimen.strategy+'</div></div><div class="ws-hr">'+qimen.hr+'</div></div>';
+
+  // Panel 1: Star Blueprint™
+  if(ziwei){
+    var zHtml = mkLabel('星途藍圖™ · 職場原型') +
+      mkArch(ziwei.arch) +
+      mkSub('姐的情報系統') +
+      mkRow(mkItem('核心優勢', ziwei.s), mkItem('盲點', ziwei.b)) +
+      mkHR(ziwei.hr);
+    panels += mkPanel('ziwei', true, zHtml);
+  }
+
+  // Panel 2: Life Code™
+  var nd = numReading.data;
+  var nHtml = mkLabel('生命密碼™ · 生命數字 ' + numReading.num) +
+    mkArch(nd.path) +
+    mkRow(mkItem('職涯方向', nd.career), mkItem('陰影面', nd.shadow)) +
+    mkItem('核心優勢', nd.strength) +
+    mkHR(nd.hr);
+  panels += mkPanel('num', false, nHtml);
+
+  // Panel 3: Archetype Lens™
+  if(tarot){
+    var tHtml = mkLabel('原型透鏡™ · ' + tarot.card) +
+      mkArch(tarot.arch) +
+      mkRow(mkItem('職場力量', tarot.power), mkItem('核心功課', tarot.lesson)) +
+      mkItem('職涯方向', tarot.career) +
+      mkHR(tarot.hr);
+    panels += mkPanel('tarot', false, tHtml);
+  }
+
+  // Panel 4: Behavior Matrix™
+  if(disc){
+    var dHtml = mkLabel('行為矩陣™ · 工作風格') +
+      mkArch(disc.disc) +
+      mkSub('類型：' + disc.mbti) +
+      mkRow(mkItem('工作風格', disc.style), mkItem('協作方式', disc.collab)) +
+      mkRow(mkItem('溝通方式', disc.receive), mkItem('衝突模式', disc.conflict)) +
+      mkHR(disc.hr);
+    panels += mkPanel('disc', false, dHtml);
+  }
+
+  // Panel 5: Energy Gate™
+  if(meihua){
+    var mHtml = mkLabel('能量之門™ · 五行定位') +
+      mkArch(meihua.gua + ' — ' + meihua.name) +
+      mkRow(mkItem('天性特質', meihua.nature), mkItem('力量時機', meihua.timing)) +
+      mkItem('職場洞察', meihua.career) +
+      mkHR(meihua.hr);
+    panels += mkPanel('meihua', false, mHtml);
+  }
+
+  // Panel 6: Command Field™
+  if(qimen){
+    var qHtml = mkLabel('命令場™ · 策略定位') +
+      mkArch(qimen.gate) +
+      mkSub('策略定位情報') +
+      mkRow(mkItem('策略特質', qimen.nature), mkItem('提醒', qimen.caution)) +
+      mkItem('職涯策略', qimen.strategy) +
+      mkHR(qimen.hr);
+    panels += mkPanel('qimen', false, qHtml);
+  }
+
   document.getElementById('ws-content').innerHTML=panels;
   applyTier();
   document.getElementById('res-panel').style.display='block';
