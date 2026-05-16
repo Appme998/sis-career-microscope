@@ -314,7 +314,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
     <div id="lunar-note" style="display:none;font-size:10px;color:var(--gold-l);padding:8px;background:rgba(200,164,90,.08);border-radius:8px;margin-bottom:8px;line-height:1.6;">
       ⚠ 農曆輸入：請輸入農曆日期。系統以月份+1推算星座（近似值）；生肖與五行直接使用農曆年份。
     </div>
-    <button class="btn-p" onclick="doAnalyze()">Reveal 我的職場藍圖</button>
+    <button class="btn-p" onclick="doAnalyze()">揭示我的職場藍圖</button>
   </div>
 
   <div id="res-panel" style="display:none;">
@@ -855,7 +855,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
     <div id="lunar-note" style="display:none;font-size:10px;color:var(--gold-l);padding:8px;background:rgba(200,164,90,.08);border-radius:8px;margin-bottom:8px;line-height:1.6;">
       ⚠ 農曆輸入：請輸入農曆日期。系統以月份+1推算星座（近似值）；生肖與五行直接使用農曆年份。
     </div>
-    <button class="btn-p" onclick="doAnalyze()">Reveal 我的職場藍圖</button>
+    <button class="btn-p" onclick="doAnalyze()">揭示我的職場藍圖</button>
   </div>
 
   <div id="res-panel" style="display:none;">
@@ -2892,7 +2892,7 @@ function doAnalyze(){
       m=parseInt(document.getElementById('bm').value),
       d=parseInt(document.getElementById('bd').value),
       g=document.getElementById('bg').value;
-  if(!y||!m||!d||!g){alert('Please complete all fields.');return;}
+  if(!y||!m||!d||!g){alert('請填寫所有欄位。');return;}
   var sm=m,sy=y;
   if(calMode==='lunar'){sm=m+1>12?1:m+1;sy=m+1>12?y+1:y;}
   var z=getZodiac(sm,d),a=getAnimal(y),n=getNY(y);
@@ -2912,7 +2912,7 @@ function doAnalyze(){
     var colors={Wood:'#7ECFA0',Fire:'#F8A070',Earth:'#D4AA70',Metal:'#E8D5A3',Water:'#90B8F8'};
     document.getElementById('res-ny-orb').style.color=colors[n.el]||'var(--gold-l)';
   }
-  // 職場基因 — always populate regardless of n
+  // Career DNA — always populate regardless of n
   var el = n ? n.el : 'Metal';
   var cd = getCareerData(z, a, g==='F'?'F':'M', el);
   document.getElementById('res-career-preview').textContent = cd ? cd.t : 'Unique combination — explore your full blueprint.';
@@ -2923,7 +2923,7 @@ function doAnalyze(){
   // 6 Wisdom Systems
   var birthYear=parseInt(document.getElementById('by').value);
   var ziwei=getZiweiReading(z),numReading=getNumerologyReading(birthYear),tarot=getTarotReading(z),disc=getDISCReading(z),meihua=getMeihuaReading(a),qimen=getQimenReading(z);
-  var wsSystems=[{id:'ziwei',label:'星途藍圖™'},{id:'num',label:'生命密碼™'},{id:'tarot',label:'原型透鏡™'},{id:'disc',label:'行為矩陣™'},{id:'meihua',label:'能量之門™'},{id:'qimen',label:'命令場™'}];
+  var wsSystems=[{id:'ziwei',label:'Star Blueprint™'},{id:'num',label:'Life Code™'},{id:'tarot',label:'Archetype Lens™'},{id:'disc',label:'Behavior Matrix™'},{id:'meihua',label:'Energy Gate™'},{id:'qimen',label:'Command Field™'}];
   document.getElementById('ws-tabs').innerHTML=wsSystems.map(function(s,i){return '<button class="ws-tab'+(i===0?' act':'')+'" onclick="wsSwitch(\"'+s.id+'\")" id="wstab-'+s.id+'">'+s.label+'</button>';}).join('');
   // Build wisdom panels
   function mkItem(label, val){ return '<div class="ws-item"><div class="tl">'+label+'</div><div class="tv">'+val+'</div></div>'; }
@@ -2938,61 +2938,61 @@ function doAnalyze(){
 
   // Panel 1: Star Blueprint™
   if(ziwei){
-    var zHtml = mkLabel('星途藍圖™ · 職場原型') +
+    var zHtml = mkLabel('Star Blueprint™ · Career Archetype') +
       mkArch(ziwei.arch) +
-      mkSub('姐的情報系統') +
-      mkRow(mkItem('核心優勢', ziwei.s), mkItem('盲點', ziwei.b)) +
+      mkSub('Career Intelligence System') +
+      mkRow(mkItem('Core Strength', ziwei.s), mkItem('Blind Spot', ziwei.b)) +
       mkHR(ziwei.hr);
     panels += mkPanel('ziwei', true, zHtml);
   }
 
   // Panel 2: Life Code™
   var nd = numReading.data;
-  var nHtml = mkLabel('生命密碼™ · 生命數字 ' + numReading.num) +
+  var nHtml = mkLabel('Life Code™ · Path Number ' + numReading.num) +
     mkArch(nd.path) +
-    mkRow(mkItem('職涯方向', nd.career), mkItem('陰影面', nd.shadow)) +
-    mkItem('核心優勢', nd.strength) +
+    mkRow(mkItem('Career Direction', nd.career), mkItem('Shadow Side', nd.shadow)) +
+    mkItem('Core Strength', nd.strength) +
     mkHR(nd.hr);
   panels += mkPanel('num', false, nHtml);
 
   // Panel 3: Archetype Lens™
   if(tarot){
-    var tHtml = mkLabel('原型透鏡™ · ' + tarot.card) +
+    var tHtml = mkLabel('Archetype Lens™ · ' + tarot.card) +
       mkArch(tarot.arch) +
-      mkRow(mkItem('職場力量', tarot.power), mkItem('核心功課', tarot.lesson)) +
-      mkItem('職涯方向', tarot.career) +
+      mkRow(mkItem('Career Power', tarot.power), mkItem('Core Lesson', tarot.lesson)) +
+      mkItem('Career Direction', tarot.career) +
       mkHR(tarot.hr);
     panels += mkPanel('tarot', false, tHtml);
   }
 
   // Panel 4: Behavior Matrix™
   if(disc){
-    var dHtml = mkLabel('行為矩陣™ · 工作風格') +
+    var dHtml = mkLabel('Behavior Matrix™ · Work Style Profile') +
       mkArch(disc.disc) +
-      mkSub('類型：' + disc.mbti) +
-      mkRow(mkItem('工作風格', disc.style), mkItem('協作方式', disc.collab)) +
-      mkRow(mkItem('溝通方式', disc.receive), mkItem('衝突模式', disc.conflict)) +
+      mkSub('Profile: ' + disc.mbti) +
+      mkRow(mkItem('Work Style', disc.style), mkItem('Collaboration', disc.collab)) +
+      mkRow(mkItem('How to Reach You', disc.receive), mkItem('Under Conflict', disc.conflict)) +
       mkHR(disc.hr);
     panels += mkPanel('disc', false, dHtml);
   }
 
   // Panel 5: Energy Gate™
   if(meihua){
-    var mHtml = mkLabel('能量之門™ · 五行定位') +
+    var mHtml = mkLabel('Energy Gate™ · Elemental Positioning') +
       mkArch(meihua.gua + ' — ' + meihua.name) +
-      mkRow(mkItem('天性特質', meihua.nature), mkItem('力量時機', meihua.timing)) +
-      mkItem('職場洞察', meihua.career) +
+      mkRow(mkItem('Nature', meihua.nature), mkItem('Power Season', meihua.timing)) +
+      mkItem('Career Insight', meihua.career) +
       mkHR(meihua.hr);
     panels += mkPanel('meihua', false, mHtml);
   }
 
   // Panel 6: Command Field™
   if(qimen){
-    var qHtml = mkLabel('命令場™ · 策略定位') +
+    var qHtml = mkLabel('Command Field™ · Strategic Positioning') +
       mkArch(qimen.gate) +
-      mkSub('策略定位情報') +
-      mkRow(mkItem('策略特質', qimen.nature), mkItem('提醒', qimen.caution)) +
-      mkItem('職涯策略', qimen.strategy) +
+      mkSub('Strategic Positioning Intelligence') +
+      mkRow(mkItem('Strategic Nature', qimen.nature), mkItem('Caution', qimen.caution)) +
+      mkItem('Career Strategy', qimen.strategy) +
       mkHR(qimen.hr);
     panels += mkPanel('qimen', false, qHtml);
   }
