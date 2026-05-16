@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#0D1117">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="姐的顯微鏡">
-<meta name="description" content="姐的職場顯微鏡™ — 東方智慧結合20年美國HR實戰。你的個人職場情報系統。">
+<meta name="apple-mobile-web-app-title" content="Sis's Microscope">
+<meta name="description" content="姐的職場顯微鏡 — 東方智慧結合20年美國HR實戰。你的個人職場情報系統。">
 <title>姐的職場顯微鏡™</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -234,7 +234,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
 
 <div class="tier-bar">
   <span class="tier-label-txt">預覽模式：</span>
-  <div class="tier-pill tp-free act" onclick="setTier('free',this)">免費</div>
+  <div class="tier-pill tp-free act" onclick="setTier('free',this)">Free</div>
   <div class="tier-pill tp-copper" onclick="setTier('copper',this)">🥉 銅牌 $9.99</div>
   <div class="tier-pill tp-silver" onclick="setTier('silver',this)">🥈 銀牌 $19.99</div>
 </div>
@@ -294,7 +294,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
         <button class="cal-btn on" id="cb-s" onclick="switchCal('solar',this)">國曆（西曆）</button>
         <button class="cal-btn" id="cb-l" onclick="switchCal('lunar',this)">農曆（中曆）</button>
       </div>
-      <p class="ts" id="cal-note" style="font-size:10px;">輸入西曆生日 → 自動計算星座、生肖與五行</p>
+      <p class="ts" id="cal-note" style="font-size:10px;">Enter your Gregorian birthday → auto-calculates zodiac, Chinese zodiac & element</p>
     </div>
     <div class="frow">
       <div class="fg"><label class="fl">出生年份</label><input type="number" id="by" class="fi" placeholder="1990" min="1900" max="2010"></div>
@@ -312,7 +312,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
       <div class="fg"><label class="fl">性別</label><select id="bg" class="fs"><option value="">請選擇</option><option value="F">女</option><option value="M">男</option></select></div>
     </div>
     <div id="lunar-note" style="display:none;font-size:10px;color:var(--gold-l);padding:8px;background:rgba(200,164,90,.08);border-radius:8px;margin-bottom:8px;line-height:1.6;">
-      ⚠ 農曆輸入：請輸入農曆日期。系統以月份+1推算星座（近似值）；生肖與五行直接使用農曆年份。
+      ⚠ Lunar input: Enter your lunar calendar date. The system converts month +1 for zodiac (approximate); Chinese zodiac and element use your lunar year directly.
     </div>
     <button class="btn-p" onclick="doAnalyze()">揭示我的職場藍圖</button>
   </div>
@@ -339,7 +339,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
       <p id="res-career-preview" style="font-size:12px;color:#dde;line-height:1.8;"></p>
       <div id="res-career-lock" class="locked-box" style="display:none;">
         <div class="lock-icon">🔒</div>
-        <p>完整職場特質、盲點、幸運密碼與幸運色</p>
+        <p>Full career traits, blind spots, lucky codes & colors</p>
         <div class="lock-tier">🥉 銅牌解鎖</div>
       </div>
       <div id="res-career-full" style="display:none;">
@@ -371,7 +371,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
       <div id="res-wisdom-lock" class="locked-box" style="display:none;">
         <div class="lock-icon">🔒</div>
         <p>星途藍圖™ + 生命密碼™ · 你的前2層智慧解析</p>
-        <div class="lock-tier">🥈 銀牌解鎖 · 🥇 金牌解鎖 all 6</div>
+        <div class="lock-tier">🥈 銀牌解鎖 · 🥇 金牌全解鎖6大系統</div>
       </div>
       <div id="res-wisdom-full" style="display:none;">
         <!-- Tab nav -->
@@ -486,24 +486,24 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
   </div>
 
   <div class="pc">
-    <div class="pc-top"><div><div class="pc-name" style="color:rgba(255,255,255,.6);">免費</div></div><div><div class="pc-price" style="color:rgba(255,255,255,.5);">$0</div></div></div>
-    <ul class="pc-feats"><li>Sign + 生肖 + Element name</li><li>職場特質預覽（僅第一行）</li><li>每日金句（固定，每天1則）</li><li>相容性分數（僅數字）</li></ul>
+    <div class="pc-top"><div><div class="pc-name" style="color:rgba(255,255,255,.6);">Free</div></div><div><div class="pc-price" style="color:rgba(255,255,255,.5);">$0</div></div></div>
+    <ul class="pc-feats"><li>Sign + 生肖 + Element name</li><li>Career preview (first line only)</li><li>Daily quote (fixed, 1 per day)</li><li>Compatibility score (number only)</li></ul>
   </div>
 
   <div class="pc">
-    <div class="pc-top"><div><div class="pc-name" style="color:var(--copper-l);">🥉 銅牌</div><div class="pc-period">每月 · 隨時取消</div></div><div class="pc-price" style="color:var(--copper-l);">$9.99</div></div>
-    <ul class="pc-feats"><li>完整職場基因分析</li><li>幸運密碼、幸運色 & 配件</li><li>每日金句無限刷新</li><li>12星座每日能量提示</li><li>每週能量羅盤™完整解析</li><li>根源指引™ + 道家智慧™</li><li>美國州法 — 基礎查詢</li></ul>
+    <div class="pc-top"><div><div class="pc-name" style="color:var(--copper-l);">🥉 Bronze</div><div class="pc-period">每月 · 隨時取消</div></div><div class="pc-price" style="color:var(--copper-l);">$9.99</div></div>
+    <ul class="pc-feats"><li>完整職場基因分析</li><li>Lucky codes, colors & accessories</li><li>每日金句無限刷新</li><li>12星座每日能量提示</li><li>每週能量羅盤™完整解析</li><li>Root Guidance™ + Tao Wisdom™</li><li>美國州法 — 基礎查詢</li></ul>
     <button class="btn-p" style="background:linear-gradient(135deg,var(--copper),var(--gold-d));margin-top:.8rem;">開始7天免費試用</button>
   </div>
 
   <div class="pc feat">
-    <div class="pc-top"><div><div class="pc-name" style="color:var(--silver2-l);">🥈 銀牌</div><div class="pc-period">每月 · 年繳省$60</div></div><div class="pc-price" style="color:var(--silver2-l);">$19.99</div></div>
+    <div class="pc-top"><div><div class="pc-name" style="color:var(--silver2-l);">🥈 Silver</div><div class="pc-period">每月 · 年繳省$60</div></div><div class="pc-price" style="color:var(--silver2-l);">$19.99</div></div>
     <ul class="pc-feats"><li>包含銅牌所有功能</li><li>納音五行 deep reading</li><li>星途藍圖™ — 你的職場原型</li><li>生命密碼™ — 數字路徑分析</li><li>相容性分析（每月5次）</li><li>每日多系統智慧洞察</li><li>國曆/農曆雙曆模式</li><li>美國州法 — 完整主題覆蓋</li></ul>
     <button class="btn-p" style="background:linear-gradient(135deg,var(--silver2),#5A8EAE);margin-top:.8rem;">開始7天免費試用</button>
   </div>
 
   <div class="pc">
-    <div class="pc-top"><div><div class="pc-name" style="color:var(--gold-l);">🥇 金牌</div><div class="pc-period">每月 · 年繳省$120</div></div><div class="pc-price" style="color:var(--gold-l);">$39.99</div></div>
+    <div class="pc-top"><div><div class="pc-name" style="color:var(--gold-l);">🥇 Gold</div><div class="pc-period">每月 · 年繳省$120</div></div><div class="pc-price" style="color:var(--gold-l);">$39.99</div></div>
     <ul class="pc-feats"><li>包含銀牌所有功能</li><li>6大情報系統™全解鎖</li><li>原型透鏡™ + 行為矩陣™</li><li>能量之門™ + 命令場™</li><li>無限次相容性分析</li><li>美國法律 — 含姐的HR實戰觀點</li><li>每月職場預測報告</li></ul>
     <button class="btn-p" style="margin-top:.8rem;">開始7天免費試用</button>
   </div>
@@ -522,548 +522,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
   </button>
   <button class="nav-btn" onclick="goPage('analyze',this)">
     <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    Blueprint
-  </button>
-  <button class="nav-btn" onclick="goPage('combo',this)">
-    <svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><circle cx="17" cy="7" r="4"/><path d="M1 20v-2a7 7 0 0 1 7-7h8a7 7 0 0 1 7 7v2"/></svg>
-    Compat
-  </button>
-  <button class="nav-btn" onclick="goPage('law',this)">
-    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-    U.S. Law
-  </button>
-  <button class="nav-btn" onclick="goPage('pricing',this)">
-    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-    Plans
-  </button>
-</nav>
-
-<script>
-tml>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#0D1117">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="姐的顯微鏡">
-<meta name="description" content="姐的職場顯微鏡™ — 東方智慧結合20年美國HR實戰。你的個人職場情報系統。">
-<title>姐的職場顯微鏡™</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#0D1117;--ink2:#1C2333;--ink3:#2D3748;
-  --gold:#C8A45A;--gold-l:#E8D5A3;--gold-d:#8B6914;
-  --silver:#94A3B8;--mist:#F8F6F1;--cream:#FAF9F6;
-  --border:rgba(200,164,90,0.2);--border-s:rgba(200,164,90,0.1);
-  --copper:#B87333;--copper-l:#D4956A;
-  --silver2:#94A3B8;--silver2-l:#CBD5E1;
-  --text:#1C2333;--text2:#4A5568;--text3:#718096;
-}
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--ink);color:#fff;min-height:100vh;overflow-x:hidden;}
-
-/* STARS */
-.stars{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
-.stars::before,.stars::after{content:'';position:absolute;inset:0;
-  background-image:radial-gradient(1px 1px at 10% 15%,rgba(255,255,255,.5),transparent),
-  radial-gradient(1px 1px at 25% 5%,rgba(255,255,255,.4),transparent),
-  radial-gradient(1.5px 1.5px at 50% 20%,rgba(200,164,90,.6),transparent),
-  radial-gradient(1px 1px at 75% 8%,rgba(255,255,255,.4),transparent),
-  radial-gradient(1px 1px at 90% 25%,rgba(255,255,255,.3),transparent),
-  radial-gradient(1.5px 1.5px at 15% 55%,rgba(200,164,90,.4),transparent),
-  radial-gradient(1px 1px at 60% 70%,rgba(255,255,255,.3),transparent),
-  radial-gradient(1px 1px at 85% 60%,rgba(255,255,255,.4),transparent),
-  radial-gradient(1px 1px at 40% 85%,rgba(255,255,255,.2),transparent),
-  radial-gradient(1.5px 1.5px at 70% 90%,rgba(200,164,90,.3),transparent);}
-.stars::after{transform:rotate(45deg);opacity:.5;}
-
-#app{position:relative;z-index:1;max-width:480px;margin:0 auto;}
-
-/* HEADER */
-header{text-align:center;padding:2.5rem 1.5rem 1.5rem;border-bottom:1px solid var(--border);}
-.eyebrow{font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;opacity:.8;}
-header h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,7vw,2.8rem);font-weight:600;color:#fff;letter-spacing:.03em;line-height:1.1;}
-header h1 span{color:var(--gold);font-style:italic;}
-header p.tagline{font-size:12px;color:var(--silver);margin-top:.5rem;letter-spacing:.5px;line-height:1.6;}
-
-/* TIER BAR */
-.tier-bar{display:flex;align-items:center;justify-content:center;gap:5px;padding:.7rem 1rem;border-bottom:1px solid var(--border-s);background:rgba(0,0,0,.3);flex-wrap:wrap;}
-.tier-label-txt{font-size:10px;color:var(--silver);margin-right:2px;}
-.tier-pill{padding:3px 10px;border-radius:100px;font-size:10px;font-weight:500;cursor:pointer;border:1px solid;transition:all .2s;white-space:nowrap;background:transparent;}
-.tp-free{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.5);}
-.tp-copper{border-color:var(--copper);color:var(--copper-l);}
-.tp-silver{border-color:var(--silver2);color:var(--silver2-l);}
-.tp-free.act{background:rgba(255,255,255,.12);color:#fff;}
-.tp-copper.act{background:rgba(184,115,51,.2);}
-.tp-silver.act{background:rgba(148,163,184,.15);}
-
-/* NAV */
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:200;max-width:480px;margin:0 auto;background:rgba(13,17,23,.96);backdrop-filter:blur(20px);border-top:1px solid var(--border);display:flex;padding:.35rem 0 calc(.35rem + env(safe-area-inset-bottom));}
-.nav-btn{flex:1;background:none;border:none;cursor:pointer;color:var(--silver);display:flex;flex-direction:column;align-items:center;gap:2px;padding:.3rem .3rem;font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:.3px;transition:color .2s;}
-.nav-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5;}
-.nav-btn.act{color:var(--gold);}
-
-/* PAGES */
-.page{display:none;padding:1.2rem .9rem calc(75px + env(safe-area-inset-bottom));animation:fadeUp .3s ease;}
-.page.act{display:block;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-
-/* CARDS */
-.card{background:rgba(255,255,255,.04);border:1px solid var(--border-s);border-radius:16px;padding:1.2rem 1.3rem;margin-bottom:12px;position:relative;overflow:hidden;}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(200,164,90,.3),transparent);}
-.gold-card{background:linear-gradient(135deg,rgba(200,164,90,.1),rgba(139,105,20,.05));border-color:rgba(200,164,90,.25);}
-
-/* SECTION TITLE */
-.stitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold-l);display:flex;align-items:center;gap:8px;margin-bottom:1rem;}
-.stitle::after{content:'';flex:1;height:1px;background:linear-gradient(to right,var(--border),transparent);}
-
-/* FORM */
-.fg{margin-bottom:.8rem;}
-.fl{display:block;font-size:10px;font-weight:500;color:var(--gold-l);letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;}
-.fi,.fs{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(200,164,90,.2);border-radius:9px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;padding:10px 13px;outline:none;-webkit-appearance:none;transition:border-color .2s;}
-.fi:focus,.fs:focus{border-color:var(--gold);}
-.fs option{background:var(--ink);}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;}
-.cal-toggle{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:.8rem;width:fit-content;}
-.cal-btn{background:none;border:none;color:var(--silver);font-family:'DM Sans',sans-serif;font-size:11px;padding:6px 14px;cursor:pointer;transition:all .2s;}
-.cal-btn.on{background:rgba(200,164,90,.2);color:var(--gold-l);font-weight:500;}
-
-/* BUTTONS */
-.btn-p{background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--ink);border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:12px 24px;cursor:pointer;width:100%;letter-spacing:.5px;transition:opacity .2s,transform .1s;}
-.btn-p:hover{opacity:.9;transform:translateY(-1px);}
-.btn-o{background:transparent;color:var(--gold-l);border:1px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:11px;padding:7px 15px;cursor:pointer;transition:all .2s;}
-.btn-o:hover{background:rgba(200,164,90,.1);}
-
-/* RESULT */
-.res-hero{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;}
-.res-orb{width:64px;height:64px;border-radius:50%;background:rgba(200,164,90,.15);border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;overflow:hidden;}.res-orb img{width:64px;height:64px;object-fit:cover;border-radius:50%;}
-.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.7rem;}
-.ti{background:rgba(255,255,255,.04);border:1px solid var(--border-s);border-radius:9px;padding:.75rem 1rem;}
-.tl{font-size:9px;color:var(--silver);letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;}
-.tv{font-size:12px;color:#fff;font-weight:500;line-height:1.5;}
-
-/* WISDOM CARDS */
-.wcard{background:rgba(255,255,255,.03);border:1px solid var(--border-s);border-left:2px solid var(--gold);border-radius:0 11px 11px 0;padding:1rem 1.2rem;margin-bottom:.8rem;}
-.wsrc{font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;}
-.wq{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--cream);line-height:2;font-style:italic;}
-.wi{font-size:11px;color:var(--silver);margin-top:7px;line-height:1.75;padding-top:7px;border-top:1px solid var(--border-s);}
-
-/* DAILY */
-.today-hero{padding:1.2rem 1.3rem;background:linear-gradient(135deg,rgba(200,164,90,.1),rgba(13,17,23,.6));border:1px solid var(--border);border-radius:16px;margin-bottom:12px;position:relative;}
-.today-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);}
-.today-date{font-size:11px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:.3rem;}
-.today-week{font-size:11px;color:var(--silver);}
-.month-badge{display:inline-block;font-size:10px;padding:3px 12px;border-radius:100px;background:rgba(200,164,90,.12);border:1px solid var(--border);color:var(--gold-l);margin:8px 0;}
-
-.quote-box{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,3.5vw,1.25rem);color:var(--gold-l);text-align:center;line-height:2;padding:1.4rem 1rem;border:1px solid var(--border);border-radius:14px;background:rgba(200,164,90,.04);margin-bottom:10px;position:relative;font-style:italic;}
-.quote-box::before{content:'\201C';position:absolute;top:-12px;left:16px;font-size:36px;color:var(--gold);opacity:.35;line-height:1;font-family:'Cormorant Garamond',serif;}
-
-/* ZODIAC GRID */
-.ws-tab{padding:4px 10px;border-radius:20px;font-size:9px;font-weight:600;cursor:pointer;border:1px solid var(--border-s);background:transparent;color:var(--silver);transition:all .2s;white-space:nowrap;}
-.ws-tab.act{background:rgba(200,164,90,.15);border-color:var(--gold);color:var(--gold-l);}
-.ws-panel{display:none;animation:fadeIn .3s ease;}
-.ws-panel.act{display:block;}
-.ws-label{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-l);margin-bottom:.3rem;}
-.ws-arch{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:#fff;margin:.2rem 0 .5rem;}
-.ws-row{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin:.5rem 0;}
-.ws-item{background:rgba(255,255,255,.04);border-radius:8px;padding:.5rem .6rem;}
-.ws-item .tl{font-size:9px;color:var(--silver);}
-.ws-item .tv{font-size:11px;color:#dde;margin-top:2px;line-height:1.5;}
-.ws-hr{margin-top:.6rem;padding:.6rem .7rem;background:rgba(200,164,90,.07);border-left:2px solid var(--gold);border-radius:0 8px 8px 0;font-size:10px;color:var(--gold-l);line-height:1.6;}
-.zmini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:.8rem;}
-.zmini{background:rgba(255,255,255,.04);border:1px solid var(--border-s);border-radius:10px;padding:.6rem .3rem;text-align:center;cursor:pointer;transition:all .2s;}
-.zmini:hover,.zmini.on{border-color:var(--gold);background:rgba(200,164,90,.08);}
-.zmini-sign{font-size:18px;line-height:1.2;display:flex;align-items:center;justify-content:center;}.zmini-sign img{width:44px;height:44px;object-fit:contain;border-radius:50%;}
-.zmini-name{font-size:10px;color:#fff;font-weight:500;margin-top:2px;}
-.zmini-tip{font-size:9px;color:var(--gold-l);margin-top:3px;line-height:1.4;display:none;}
-.zmini.on .zmini-tip{display:block;}
-
-/* HEXAGRAM */
-.hex-wrap{display:flex;align-items:center;gap:1rem;padding:.5rem 0;}
-.hex-lines{display:flex;flex-direction:column;gap:4px;flex-shrink:0;}
-.hl{display:flex;gap:4px;}
-.hyang{width:34px;height:4px;background:var(--gold);border-radius:2px;}
-.hyin-l,.hyin-r{width:14px;height:4px;background:var(--gold);border-radius:2px;}
-.hyin-g{width:6px;}
-.hex-info h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-l);font-weight:600;}
-.hex-info p{font-size:11px;color:var(--silver);margin-top:3px;line-height:1.65;}
-
-/* US LAW */
-.mode-toggle{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:1rem;}
-.mode-btn{flex:1;padding:8px 10px;font-size:11px;background:none;border:none;cursor:pointer;color:var(--silver);transition:all .15s;}
-.mode-btn.on{background:rgba(200,164,90,.2);color:var(--gold-l);font-weight:500;}
-.topic-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:.8rem;}
-.topic-btn{padding:7px 8px;font-size:11px;background:rgba(255,255,255,.04);border:1px solid var(--border-s);border-radius:8px;cursor:pointer;color:var(--silver);text-align:left;transition:all .15s;}
-.topic-btn.on{background:rgba(200,164,90,.15);border-color:var(--gold);color:var(--gold-l);}
-.law-result{animation:fadeUp .3s ease;}
-.law-block{margin-bottom:12px;}
-.law-block-title{font-size:9px;font-weight:500;color:var(--silver);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
-.law-row{display:flex;justify-content:space-between;align-items:flex-start;padding:5px 0;border-bottom:1px solid var(--border-s);gap:8px;}
-.law-row:last-child{border:none;}
-.law-key{font-size:11px;color:var(--silver);flex:1;line-height:1.5;}
-.law-val{font-size:11px;font-weight:500;color:#fff;text-align:right;max-width:55%;line-height:1.5;}
-.law-val.hi{color:#68D391;}
-.diff-note{font-size:10px;color:#F6AD55;background:rgba(246,173,85,.1);padding:6px 10px;border-radius:8px;margin-top:6px;line-height:1.6;}
-.sis-take{background:rgba(255,255,255,.04);border:1px solid var(--border-s);border-left:2px solid var(--gold);border-radius:0 10px 10px 0;padding:.8rem 1rem;margin-top:10px;}
-.sis-take-label{font-size:9px;color:var(--gold);letter-spacing:2px;margin-bottom:4px;}
-.sis-take-text{font-size:11px;color:var(--silver);line-height:1.75;}
-.lock-box{background:rgba(255,255,255,.04);border:1px dashed rgba(200,164,90,.3);border-radius:10px;padding:14px;text-align:center;margin-top:10px;}
-.lock-box p{font-size:11px;color:var(--silver);margin:3px 0 8px;}
-.disclaimer{font-size:9px;color:var(--silver);opacity:.6;line-height:1.6;padding-top:8px;border-top:1px solid var(--border-s);margin-top:8px;}
-
-/* COMPAT */
-.cbar-wrap{margin-top:7px;}
-.cbar-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
-.cbar-label{font-size:10px;color:var(--silver);width:100px;flex-shrink:0;}
-.cbar-bg{flex:1;height:5px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden;}
-.cbar-fill{height:100%;border-radius:3px;background:linear-gradient(to right,var(--gold-d),var(--gold));transition:width .9s ease;}
-.cbar-val{font-size:10px;color:var(--gold-l);width:28px;text-align:right;}
-
-/* CHAT */
-.chat-msgs{min-height:160px;max-height:300px;overflow-y:auto;padding:8px;background:rgba(0,0,0,.2);border-radius:12px;margin-bottom:8px;display:flex;flex-direction:column;gap:8px;}
-.cmsg{display:flex;gap:6px;align-items:flex-start;}
-.cmsg.u{flex-direction:row-reverse;}
-.cavt{width:26px;height:26px;border-radius:50%;background:rgba(200,164,90,.2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--gold-l);flex-shrink:0;}
-.cmsg.u .cavt{background:rgba(100,150,220,.15);border-color:rgba(100,150,220,.3);color:#90B8F8;}
-.cbub{font-size:11px;line-height:1.75;color:#fff;background:rgba(255,255,255,.05);border:1px solid var(--border-s);border-radius:10px;padding:.65rem .9rem;max-width:88%;white-space:pre-line;}
-.cmsg.u .cbub{background:rgba(200,164,90,.1);border-color:var(--border);}
-.cin-row{display:flex;gap:5px;}
-.cin{flex:1;font-size:12px;padding:9px 12px;background:rgba(255,255,255,.05);border:1px solid rgba(200,164,90,.2);border-radius:8px;color:#fff;font-family:'DM Sans',sans-serif;outline:none;}
-.cin:focus{border-color:var(--gold);}
-.csend{padding:9px 14px;font-size:12px;font-weight:500;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--ink);border:none;border-radius:8px;cursor:pointer;}
-.qbtns{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;}
-.qbtn{font-size:10px;padding:4px 8px;border:1px solid var(--border-s);border-radius:7px;background:none;cursor:pointer;color:var(--silver);transition:all .15s;}
-.qbtn:hover{border-color:var(--gold);color:var(--gold-l);}
-
-/* PRICING */
-.pc{background:rgba(255,255,255,.04);border:1px solid var(--border-s);border-radius:14px;padding:1.2rem;margin-bottom:8px;position:relative;}
-.pc.feat{border-color:var(--gold);}
-.pc.feat::before{content:'Most Popular';position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ink);font-size:9px;font-weight:500;padding:2px 12px;border-radius:100px;white-space:nowrap;letter-spacing:.5px;}
-.pc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.7rem;}
-.pc-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#fff;}
-.pc-price{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--gold-l);}
-.pc-period{font-size:10px;color:var(--silver);margin-top:2px;}
-.pc-feats{font-size:11px;color:var(--silver);line-height:2;}
-.pc-feats li{list-style:none;padding-left:1rem;position:relative;}
-.pc-feats li::before{content:'✦';color:var(--gold);font-size:8px;position:absolute;left:0;top:2px;}
-
-/* LOCKED */
-.locked-box{background:rgba(13,17,23,.8);border:1px dashed rgba(200,164,90,.3);border-radius:10px;padding:1.2rem;text-align:center;margin-top:8px;}
-.locked-box .lock-icon{font-size:22px;margin-bottom:4px;opacity:.7;}
-.locked-box p{font-size:11px;color:var(--silver);margin:3px 0 8px;line-height:1.6;}
-.lock-tier{display:inline-block;font-size:10px;padding:3px 12px;border-radius:100px;background:rgba(200,164,90,.1);border:1px solid var(--border);color:var(--gold-l);}
-
-footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);font-size:10px;color:var(--silver);margin-bottom:calc(58px + env(safe-area-inset-bottom));opacity:.6;}
-.divider{height:1px;background:var(--border-s);margin:.9rem 0;}
-.ts{color:var(--silver);font-size:11px;}
-.tg{color:var(--gold-l);}
-</style>
-</head>
-<body>
-<div class="stars"></div>
-<div id="app">
-
-<header>
-  <div class="eyebrow">Career Intelligence Platform</div>
-  <h1>Sis's Career<br><span>Microscope™</span></h1>
-  <p class="tagline">東方智慧 × 20年美國HR實戰<br>你的個人職場情報系統</p>
-  <div style="margin-top:.5rem;"><a href="index.html" style="font-size:10px;color:var(--gold-l);border:1px solid var(--border-s);padding:3px 10px;border-radius:20px;text-decoration:none;">🌐 English</a></div>
-</header>
-
-<div class="tier-bar">
-  <span class="tier-label-txt">預覽模式：</span>
-  <div class="tier-pill tp-free act" onclick="setTier('free',this)">免費</div>
-  <div class="tier-pill tp-copper" onclick="setTier('copper',this)">🥉 銅牌 $9.99</div>
-  <div class="tier-pill tp-silver" onclick="setTier('silver',this)">🥈 銀牌 $19.99</div>
-</div>
-
-<!-- TODAY PAGE -->
-<div id="pg-today" class="page act">
-  <div class="today-hero">
-    <div class="today-date" id="today-date-str"></div>
-    <div class="today-week" id="today-week-str"></div>
-    <div class="month-badge" id="month-badge"></div>
-  </div>
-
-  <div class="quote-box" id="daily-quote"></div>
-  <div style="display:flex;gap:6px;margin-bottom:12px;">
-    <button class="btn-o" id="btn-refresh" onclick="refreshQ()" style="flex:1;">↺ New quote</button>
-  </div>
-
-  <div class="card">
-    <div class="stitle">今日智慧</div>
-    <div id="today-wisdom"></div>
-    <div id="today-wisdom-lock" class="locked-box" style="display:none;">
-      <div class="lock-icon">🔒</div>
-      <p>解鎖每日多系統職場洞察</p>
-      <div class="lock-tier">🥈 銀牌解鎖</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="stitle">本週能量羅盤™</div>
-    <div id="today-hex"></div>
-    <div id="today-hex-detail" style="display:none;margin-top:.8rem;"></div>
-    <div id="today-hex-lock" class="locked-box" style="display:none;">
-      <div class="lock-icon">🔒</div>
-      <p>完整週度解析 + HR職場應用</p>
-      <div class="lock-tier">🥉 銅牌解鎖</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="stitle">12星座 — 今日能量</div>
-    <div class="zmini-grid" id="zodiac-grid"></div>
-    <div id="zodiac-grid-lock" class="locked-box" style="display:none;margin-top:8px;">
-      <div class="lock-icon">🔒</div>
-      <p>12星座每日職場提示</p>
-      <div class="lock-tier">🥉 銅牌解鎖</div>
-    </div>
-  </div>
-</div>
-
-<!-- ANALYZE PAGE -->
-<div id="pg-analyze" class="page">
-  <div class="card gold-card">
-    <div class="stitle">我的職場藍圖</div>
-    <div style="margin-bottom:.8rem;">
-      <div class="fl">日曆系統</div>
-      <div class="cal-toggle">
-        <button class="cal-btn on" id="cb-s" onclick="switchCal('solar',this)">國曆（西曆）</button>
-        <button class="cal-btn" id="cb-l" onclick="switchCal('lunar',this)">農曆（中曆）</button>
-      </div>
-      <p class="ts" id="cal-note" style="font-size:10px;">輸入西曆生日 → 自動計算星座、生肖與五行</p>
-    </div>
-    <div class="frow">
-      <div class="fg"><label class="fl">出生年份</label><input type="number" id="by" class="fi" placeholder="1990" min="1900" max="2010"></div>
-      <div class="fg"><label class="fl" id="ml">出生月份</label>
-        <select id="bm" class="fs"><option value="">Month</option>
-          <option value="1">January</option><option value="2">February</option><option value="3">March</option>
-          <option value="4">April</option><option value="5">May</option><option value="6">June</option>
-          <option value="7">July</option><option value="8">August</option><option value="9">September</option>
-          <option value="10">October</option><option value="11">November</option><option value="12">December</option>
-        </select>
-      </div>
-    </div>
-    <div class="frow">
-      <div class="fg"><label class="fl">出生日期</label><input type="number" id="bd" class="fi" placeholder="15" min="1" max="31"></div>
-      <div class="fg"><label class="fl">性別</label><select id="bg" class="fs"><option value="">請選擇</option><option value="F">女</option><option value="M">男</option></select></div>
-    </div>
-    <div id="lunar-note" style="display:none;font-size:10px;color:var(--gold-l);padding:8px;background:rgba(200,164,90,.08);border-radius:8px;margin-bottom:8px;line-height:1.6;">
-      ⚠ 農曆輸入：請輸入農曆日期。系統以月份+1推算星座（近似值）；生肖與五行直接使用農曆年份。
-    </div>
-    <button class="btn-p" onclick="doAnalyze()">揭示我的職場藍圖</button>
-  </div>
-
-  <div id="res-panel" style="display:none;">
-    <div class="card gold-card">
-      <div class="res-hero">
-        <div class="res-orb" id="res-orb-el"><img src="Scorpio.png" alt="Scorpio" style="width:64px;height:64px;object-fit:cover;border-radius:50%;"></div>
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--gold-l);" id="res-title"></div>
-          <div class="ts" style="margin-top:3px;" id="res-sub"></div>
-        </div>
-      </div>
-      <div class="tgrid">
-        <div class="ti"><div class="tl">星座</div><div class="tv" id="res-z"></div></div>
-        <div class="ti"><div class="tl">生肖</div><div class="tv" id="res-a"></div></div>
-        <div class="ti"><div class="tl">納音五行</div><div class="tv" id="res-n"></div></div>
-        <div class="ti"><div class="tl">天干</div><div class="tv" id="res-s"></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="stitle">職場基因</div>
-      <p id="res-career-preview" style="font-size:12px;color:#dde;line-height:1.8;"></p>
-      <div id="res-career-lock" class="locked-box" style="display:none;">
-        <div class="lock-icon">🔒</div>
-        <p>完整職場特質、盲點、幸運密碼與幸運色</p>
-        <div class="lock-tier">🥉 銅牌解鎖</div>
-      </div>
-      <div id="res-career-full" style="display:none;">
-        <div class="divider"></div>
-        <p id="res-enhance" class="ts" style="line-height:1.8;font-size:11px;"></p>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:.8rem;">
-          <div class="ti" style="text-align:center;"><div class="tl">幸運色</div><div class="tv" style="font-size:11px;" id="res-color"></div></div>
-          <div class="ti" style="text-align:center;" id="res-acc-tile"><div class="tl">幸運配件</div><div class="tv" style="font-size:11px;" id="res-acc"></div></div>
-          <div class="ti" style="text-align:center;" id="res-code-tile"><div class="tl">職場密碼</div><div class="tv" style="font-size:11px;" id="res-code"></div></div>
-        </div>
-        <div id="res-lucky-lock" class="locked-box" style="display:none;margin-top:.6rem;padding:.5rem;">
-          <div class="lock-icon" style="font-size:14px;">🔒</div>
-          <p style="font-size:10px;margin:.2rem 0;">幸運配件 &amp; 職場密碼</p>
-          <div class="lock-tier">🥉 銅牌解鎖</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="stitle">納音五行 Reading</div>
-      <div style="display:flex;align-items:center;gap:.8rem;">
-        <div id="res-ny-orb" style="width:42px;height:42px;border-radius:50%;background:rgba(200,164,90,.15);border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:var(--gold-l);flex-shrink:0;"></div>
-        <div><div class="tg" style="font-family:'Cormorant Garamond',serif;font-size:.95rem;" id="res-ny-name"></div><p class="ts" style="margin-top:3px;font-size:11px;" id="res-ny-desc"></p></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="stitle">智慧系統配對</div>
-      <div id="res-wisdom-lock" class="locked-box" style="display:none;">
-        <div class="lock-icon">🔒</div>
-        <p>星途藍圖™ + 生命密碼™ · 你的前2層智慧解析</p>
-        <div class="lock-tier">🥈 銀牌解鎖 · 🥇 金牌解鎖 all 6</div>
-      </div>
-      <div id="res-wisdom-full" style="display:none;">
-        <!-- Tab nav -->
-        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:.8rem;" id="ws-tabs"></div>
-        <!-- Tab content -->
-        <div id="ws-content"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- US LAW PAGE -->
-<div id="pg-law" class="page">
-  <div class="card gold-card">
-    <div class="stitle">美國職場法律查詢</div>
-    <p class="ts" style="margin-bottom:1rem;font-size:11px;">州法 vs 聯邦標準 — 談判前先了解你的權利。</p>
-
-    <div class="mode-toggle">
-      <button class="mode-btn on" onclick="lawMode('browse',this)">依州份查詢</button>
-      <button class="mode-btn" onclick="lawMode('question',this)">描述我的情況</button>
-    </div>
-
-    <div id="law-browse">
-      <div class="fg"><label class="fl">選擇州份</label>
-        <select id="law-state" class="fs" onchange="onStateChange()">
-          <option value="">— 選擇州份 —</option>
-          <option value="CA">California</option><option value="NY">New York</option>
-          <option value="TX">Texas</option><option value="FL">Florida</option>
-          <option value="WA">Washington</option><option value="IL">Illinois</option>
-          <option value="MA">Massachusetts</option><option value="CO">Colorado</option>
-          <option value="NV">Nevada</option><option value="OR">Oregon</option>
-        </select>
-      </div>
-      <div class="fl" style="margin-bottom:6px;">主題</div>
-      <div class="topic-grid" id="topic-grid">
-        <button class="topic-btn" onclick="sel主題('wage',this)">💵 最低工資</button>
-        <button class="topic-btn" onclick="sel主題('overtime',this)">⏰ 加班規定</button>
-        <button class="topic-btn" onclick="sel主題('sick',this)">🏥 帶薪病假</button>
-        <button class="topic-btn" onclick="sel主題('noncompete',this)">📋 競業禁止</button>
-        <button class="topic-btn" onclick="sel主題('termination',this)">🚪 終止雇用</button>
-        <button class="topic-btn" onclick="sel主題('ai',this)">🤖 AI招募法規</button>
-      </div>
-      <button class="btn-p" onclick="doLawLookup()">立即查詢</button>
-    </div>
-
-    <div id="law-question" style="display:none;">
-      <div class="fg"><label class="fl">選擇州份</label>
-        <select id="law-q-state" class="fs">
-          <option value="">— 選擇州份 —</option>
-          <option value="CA">California</option><option value="NY">New York</option>
-          <option value="TX">Texas</option><option value="FL">Florida</option>
-          <option value="WA">Washington</option><option value="IL">Illinois</option>
-          <option value="MA">Massachusetts</option><option value="CO">Colorado</option>
-          <option value="NV">Nevada</option><option value="OR">Oregon</option>
-        </select>
-      </div>
-      <div class="fg"><label class="fl">描述你的情況</label>
-        <textarea id="law-q-text" class="fi" style="resize:vertical;min-height:72px;" placeholder="e.g. My manager is asking me to work 10+ hour days without overtime pay in California. Is this legal?"></textarea>
-      </div>
-      <button class="btn-p" onclick="doLawQuestion()">獲取法律背景</button>
-    </div>
-  </div>
-
-  <div id="law-result"></div>
-</div>
-
-<!-- COMBO PAGE -->
-<div id="pg-combo" class="page">
-  <div class="card gold-card">
-    <div class="stitle">職場相容性分析</div>
-    <p class="ts" style="margin-bottom:1rem;font-size:11px;">分析兩人的職場能量與合作風格。</p>
-    <div style="background:rgba(255,255,255,.03);border:1px solid var(--border-s);border-radius:10px;padding:.9rem;margin-bottom:.5rem;">
-      <div style="font-size:9px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:.6rem;">You</div>
-      <div class="frow">
-        <div class="fg"><label class="fl">Zodiac</label><select id="p1z" class="fs"><option value="">請選擇</option></select></div>
-        <div class="fg"><label class="fl">生肖</label><select id="p1a" class="fs"><option value="">請選擇</option></select></div>
-      </div>
-    </div>
-    <div style="text-align:center;padding:.2rem 0;font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.2rem;opacity:.6;">vs.</div>
-    <div style="background:rgba(255,255,255,.03);border:1px solid var(--border-s);border-radius:10px;padding:.9rem;margin-bottom:.9rem;">
-      <div style="font-size:9px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:.6rem;">對方</div>
-      <div class="frow">
-        <div class="fg"><label class="fl">Zodiac</label><select id="p2z" class="fs"><option value="">請選擇</option></select></div>
-        <div class="fg"><label class="fl">生肖</label><select id="p2a" class="fs"><option value="">請選擇</option></select></div>
-      </div>
-    </div>
-    <button class="btn-p" onclick="doCombo()">分析相容性</button>
-  </div>
-  <div id="combo-res" style="display:none;">
-    <div class="card gold-card" style="margin-top:4px;">
-      <div class="stitle">相容性指數</div>
-      <div class="cbar-wrap" id="combo-bars"></div>
-    </div>
-    <div class="card" style="margin-top:4px;">
-      <div class="stitle">勝算情報™ 策略</div>
-      <div id="combo-advice"></div>
-    </div>
-    <div id="combo-lock" class="locked-box" style="display:none;margin-top:4px;">
-      <div class="lock-icon">🔒</div>
-      <p>完整相容性報告 + 能量羅盤配對 + 行為矩陣分析</p>
-      <div class="lock-tier">🥇 金牌解鎖</div>
-    </div>
-  </div>
-</div>
-
-<!-- PRICING PAGE -->
-<div id="pg-pricing" class="page">
-  <div style="text-align:center;padding:.5rem 0 1.5rem;">
-    <div class="eyebrow">Choose Your Plan</div>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold-l);margin-top:.5rem;">解鎖你的職場情報</h2>
-    <p class="ts" style="font-size:11px;margin-top:.3rem;line-height:1.6;">東方智慧系統 × 西方HR專業<br>同類型中獨一無二的平台。</p>
-  </div>
-
-  <div class="pc">
-    <div class="pc-top"><div><div class="pc-name" style="color:rgba(255,255,255,.6);">免費</div></div><div><div class="pc-price" style="color:rgba(255,255,255,.5);">$0</div></div></div>
-    <ul class="pc-feats"><li>Sign + 生肖 + Element name</li><li>職場特質預覽（僅第一行）</li><li>每日金句（固定，每天1則）</li><li>相容性分數（僅數字）</li></ul>
-  </div>
-
-  <div class="pc">
-    <div class="pc-top"><div><div class="pc-name" style="color:var(--copper-l);">🥉 銅牌</div><div class="pc-period">每月 · 隨時取消</div></div><div class="pc-price" style="color:var(--copper-l);">$9.99</div></div>
-    <ul class="pc-feats"><li>完整職場基因分析</li><li>幸運密碼、幸運色 & 配件</li><li>每日金句無限刷新</li><li>12星座每日能量提示</li><li>每週能量羅盤™完整解析</li><li>根源指引™ + 道家智慧™</li><li>美國州法 — 基礎查詢</li></ul>
-    <button class="btn-p" style="background:linear-gradient(135deg,var(--copper),var(--gold-d));margin-top:.8rem;">開始7天免費試用</button>
-  </div>
-
-  <div class="pc feat">
-    <div class="pc-top"><div><div class="pc-name" style="color:var(--silver2-l);">🥈 銀牌</div><div class="pc-period">每月 · 年繳省$60</div></div><div class="pc-price" style="color:var(--silver2-l);">$19.99</div></div>
-    <ul class="pc-feats"><li>包含銅牌所有功能</li><li>納音五行 deep reading</li><li>星途藍圖™ — 你的職場原型</li><li>生命密碼™ — 數字路徑分析</li><li>相容性分析（每月5次）</li><li>每日多系統智慧洞察</li><li>國曆/農曆雙曆模式</li><li>美國州法 — 完整主題覆蓋</li></ul>
-    <button class="btn-p" style="background:linear-gradient(135deg,var(--silver2),#5A8EAE);margin-top:.8rem;">開始7天免費試用</button>
-  </div>
-
-  <div class="pc">
-    <div class="pc-top"><div><div class="pc-name" style="color:var(--gold-l);">🥇 金牌</div><div class="pc-period">每月 · 年繳省$120</div></div><div class="pc-price" style="color:var(--gold-l);">$39.99</div></div>
-    <ul class="pc-feats"><li>包含銀牌所有功能</li><li>6大情報系統™全解鎖</li><li>原型透鏡™ + 行為矩陣™</li><li>能量之門™ + 命令場™</li><li>無限次相容性分析</li><li>美國法律 — 含姐的HR實戰觀點</li><li>每月職場預測報告</li></ul>
-    <button class="btn-p" style="margin-top:.8rem;">開始7天免費試用</button>
-  </div>
-
-  <div style="text-align:center;font-size:10px;color:var(--silver);margin:.5rem 0 1rem;line-height:1.7;">所有方案含7天免費試用 · 無需信用卡<br>隨時取消 · Stripe安全付款</div>
-</div>
-
-</div><!-- end app -->
-<footer>姐的職場顯微鏡™ · 東方智慧 × 西方HR專業<br><span style="opacity:.5;">僅供個人探索。不構成法律或財務建議。</span></footer>
-
-<!-- BOTTOM NAV -->
-<nav class="bottom-nav">
-  <button class="nav-btn act" onclick="goPage('today',this)">
-    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
-    Today
-  </button>
-  <button class="nav-btn" onclick="goPage('analyze',this)">
-    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    Blueprint
+    藍圖
   </button>
   <button class="nav-btn" onclick="goPage('combo',this)">
     <svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><circle cx="17" cy="7" r="4"/><path d="M1 20v-2a7 7 0 0 1 7-7h8a7 7 0 0 1 7 7v2"/></svg>
@@ -2491,7 +1950,7 @@ var TIER='free';
 var TL={free:0,copper:1,silver:2,gold:3};
 var gte=function(t){return TL[TIER]>=TL[t];};
 var calMode='solar';
-var curTopic='';
+var cur主題='';
 
 // DATA
 var ZD=[
@@ -2596,7 +2055,7 @@ var DAILY_QUOTES=[
   "Every career setback contains the seed of the pivot that changes everything. Look for it."
 ];
 
-var MONTHLY_THEMES=['策略定位','Self-Mastery','Relationship Intelligence','Wealth Mindset','Leadership Craft','Communication Artistry','Resilience & Pivots','Innovation Bias','Timing & Momentum','Emotional Intelligence','Career Architecture','Year-End Harvest'];
+var MONTHLY_THEMES=['Strategic Positioning','Self-Mastery','Relationship Intelligence','Wealth Mindset','Leadership Craft','Communication Artistry','Resilience & Pivots','Innovation Bias','Timing & Momentum','Emotional Intelligence','Career Architecture','Year-End Harvest'];
 
 var HEXAGRAMS=[
   {n:'Qián — Heaven',l:[1,1,1,1,1,1],q:'Heaven moves with vigor; the noble one strives unceasingly.',career:'High-energy week for bold moves. Your proposal, that conversation you\'ve been avoiding, the raise you deserve — the window is open.',hr:'Sis\'s HR read: This is a week to be visible. Speak up in meetings. Reach out to the person whose attention you\'ve been waiting to get. Initiative compounds.'},
@@ -2634,7 +2093,7 @@ var ZIWEI_STARS = {
   Pisces:     {star:'紫微星',palace:'命宮',arch:'The Intuitive Visionary',s:'Sees connections between things others treat as separate. Creative and deeply empathic leadership.',b:'Boundary struggles. Absorbs others\' problems and loses sight of own direction.',hr:'Sis\'s read: Pisces leaders give so much that they sometimes forget to protect their own energy. The "no" you say to the wrong opportunity is the "yes" to the right one.'}
 };
 
-// 2. Numeric Resonance — Numerology (Life 生命數字 from birth year)
+// 2. Numeric Resonance — Numerology (Life Path Number from birth year)
 var NUMEROLOGY_DB = {
   1:{path:'The Independent Leader',career:'Built to lead from the front. Best work happens when you own the outcome completely.',strength:'Decisive, original, courageous under pressure.',shadow:'Can\'t delegate. Struggles when stripped of autonomy.',hr:'Sis\'s read: The fastest path to a Number 1\'s ceiling is micromanagement — of themselves or by others. Negotiate for autonomy before you negotiate salary.',color:'#FF6B6B'},
   2:{path:'The Collaborative Architect',career:'Power is relational. You build bridges across factions and make complex groups function.',strength:'Empathy, diplomacy, intuitive conflict resolution.',shadow:'Loses self in others\' agendas. Avoids healthy confrontation.',hr:'Sis\'s read: Number 2s are often under-promoted because they\'re too busy making others shine. Start keeping a wins log and learn to take visible credit for invisible work.',color:'#90B8F8'},
@@ -2701,7 +2160,7 @@ var MEIHUA_DB = {
   Pig:    {gua:'坎 ☵',name:'Abyss — Abundance',nature:'Water: Generous, deep. The reservoir that gives freely.',career:'Your generosity of time, knowledge, and support creates loyalty networks most professionals can\'t build deliberately.',timing:'Winter · Year-end · Relationship-deepening',hr:'Sis\'s read: Generosity you can\'t articulate is generosity that can\'t be compensated. Start noting your contributions explicitly.'}
 };
 
-// 6. Command Field — Qi Men Dun Jia (策略定位 · 九宮八門)
+// 6. Command Field — Qi Men Dun Jia (Strategic Positioning · 九宮八門)
 var QIMEN_DB = {
   Aries:      {gate:'開門 Open Gate',palace:'Heaven Palace · 6',nature:'The gate of expansion and bold beginnings.',strategy:'You\'re aligned with initiation energy. The best timing for career moves and negotiations is when you act from this gate — bold, clear, committed.',caution:'Opening without a plan dissipates the energy. Clarity of intention before action.',hr:'Sis\'s read: The question isn\'t whether to make the move — it\'s whether you\'ve defined what success looks like when you land.'},
   Taurus:     {gate:'休門 Rest Gate',palace:'Water Palace · 1',nature:'The gate of recovery, planning, and strategic withdrawal.',strategy:'Your power is in strategic patience. You make better decisions from a rested, resourced state than from urgency.',caution:'Rest that becomes avoidance. Know the difference between wisdom and delay.',hr:'Sis\'s read: Your competitors are burning out while you\'re preparing. That\'s not slow — that\'s strategic convalescing.'},
@@ -2892,7 +2351,7 @@ function doAnalyze(){
       m=parseInt(document.getElementById('bm').value),
       d=parseInt(document.getElementById('bd').value),
       g=document.getElementById('bg').value;
-  if(!y||!m||!d||!g){alert('請填寫所有欄位。');return;}
+  if(!y||!m||!d||!g){alert('Please complete all fields.');return;}
   var sm=m,sy=y;
   if(calMode==='lunar'){sm=m+1>12?1:m+1;sy=m+1>12?y+1:y;}
   var z=getZodiac(sm,d),a=getAnimal(y),n=getNY(y);
@@ -2912,7 +2371,7 @@ function doAnalyze(){
     var colors={Wood:'#7ECFA0',Fire:'#F8A070',Earth:'#D4AA70',Metal:'#E8D5A3',Water:'#90B8F8'};
     document.getElementById('res-ny-orb').style.color=colors[n.el]||'var(--gold-l)';
   }
-  // Career DNA — always populate regardless of n
+  // 職場基因 — always populate regardless of n
   var el = n ? n.el : 'Metal';
   var cd = getCareerData(z, a, g==='F'?'F':'M', el);
   document.getElementById('res-career-preview').textContent = cd ? cd.t : 'Unique combination — explore your full blueprint.';
@@ -3061,7 +2520,7 @@ function doCombo(){
   }).join('');
   setTimeout(function(){for(var i=0;i<4;i++)document.getElementById('cb'+i).style.width=vs[i]+'%';},80);
   var sw=WISDOM_SYSTEMS[1];
-  document.getElementById('combo-advice').innerHTML='<div class="wcard" style="border-left-color:'+sw.c+'"><div class="wsrc">Victory Intel™ · 協作方式 Strategy</div><div class="wq">"'+sw.q+'"</div><div class="wi">For '+z1+' × '+z2+': '+sw.i+'</div></div>';
+  document.getElementById('combo-advice').innerHTML='<div class="wcard" style="border-left-color:'+sw.c+'"><div class="wsrc">Victory Intel™ · Collaboration Strategy</div><div class="wq">"'+sw.q+'"</div><div class="wi">For '+z1+' × '+z2+': '+sw.i+'</div></div>';
   applyTier();
   document.getElementById('combo-res').style.display='block';
   setTimeout(function(){document.getElementById('combo-res').scrollIntoView({behavior:'smooth'});},100);
@@ -3165,7 +2624,7 @@ function applyTier(){
       var note=document.createElement('div');
       note.id='ws-silver-note';
       note.style.cssText='margin-top:.6rem;padding:.5rem .7rem;background:rgba(200,164,90,.07);border-radius:8px;font-size:9px;color:var(--gold-l);text-align:center;';
-      note.innerHTML='🥇 金牌解鎖 原型透鏡™, 行為矩陣™, 能量之門™ & 命令場™';
+      note.innerHTML='🥇 金牌解鎖 Archetype Lens™, Behavior Matrix™, Energy Gate™ & Command Field™';
       var wsc=document.getElementById('ws-content');
       if(wsc) wsc.after(note);
     }
