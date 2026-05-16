@@ -2360,10 +2360,8 @@ function doAnalyze(){
   document.getElementById('res-z').textContent=z+(calMode==='lunar'?' (lunar approx.)':'');
   document.getElementById('res-a').textContent='Year of the '+a+' ('+y+')';
   document.getElementById('res-n').textContent=n?n.ny:'—';
- var ZI=ZD.find(function(x){return x.en===z;})||ZD[0];
+var ZI=ZD.find(function(x){return x.en===z;})||ZD[0];
 document.getElementById('res-orb-el').innerHTML='<img src="'+ZI.img+'" alt="'+ZI.n+'" style="width:64px;height:64px;object-fit:cover;border-radius:50%;">';
-  var ZI=ZD.find(function(x){return x.n===z;})||ZD[0];
-  document.getElementById('res-orb-el').innerHTML='<img src="'+ZI.img+'" alt="'+ZI.n+'" style="width:64px;height:64px;object-fit:cover;border-radius:50%;" onerror="this.outerHTML=ZI.e">';
   // Nayin section (only if n found)
   if(n){
     document.getElementById('res-ny-name').textContent=n.ny;
