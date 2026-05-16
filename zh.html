@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#0D1117">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Sis's Microscope">
-<meta name="description" content="姐的職場顯微鏡 — 東方智慧結合20年美國HR實戰。你的個人職場情報系統。">
+<meta name="apple-mobile-web-app-title" content="姐的顯微鏡">
+<meta name="description" content="姐的職場顯微鏡 — 東方智慧結合西方HR專業。你的個人職場情報系統。">
 <title>姐的職場顯微鏡™</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -233,8 +233,8 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
 </header>
 
 <div class="tier-bar">
-  <span class="tier-label-txt">預覽模式：</span>
-  <div class="tier-pill tp-free act" onclick="setTier('free',this)">Free</div>
+  <span class="tier-label-txt">預覽：</span>
+  <div class="tier-pill tp-free act" onclick="setTier('free',this)">免費</div>
   <div class="tier-pill tp-copper" onclick="setTier('copper',this)">🥉 銅牌 $9.99</div>
   <div class="tier-pill tp-silver" onclick="setTier('silver',this)">🥈 銀牌 $19.99</div>
 </div>
@@ -268,7 +268,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
     <div id="today-hex-detail" style="display:none;margin-top:.8rem;"></div>
     <div id="today-hex-lock" class="locked-box" style="display:none;">
       <div class="lock-icon">🔒</div>
-      <p>完整週度解析 + HR職場應用</p>
+      <p>完整週度解析 + HR應用</p>
       <div class="lock-tier">🥉 銅牌解鎖</div>
     </div>
   </div>
@@ -289,7 +289,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
   <div class="card gold-card">
     <div class="stitle">我的職場藍圖</div>
     <div style="margin-bottom:.8rem;">
-      <div class="fl">日曆系統</div>
+      <div class="fl">Calendar system</div>
       <div class="cal-toggle">
         <button class="cal-btn on" id="cb-s" onclick="switchCal('solar',this)">國曆（西曆）</button>
         <button class="cal-btn" id="cb-l" onclick="switchCal('lunar',this)">農曆（中曆）</button>
@@ -359,7 +359,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
     </div>
 
     <div class="card">
-      <div class="stitle">納音五行 Reading</div>
+      <div class="stitle">納音五行解讀</div>
       <div style="display:flex;align-items:center;gap:.8rem;">
         <div id="res-ny-orb" style="width:42px;height:42px;border-radius:50%;background:rgba(200,164,90,.15);border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:var(--gold-l);flex-shrink:0;"></div>
         <div><div class="tg" style="font-family:'Cormorant Garamond',serif;font-size:.95rem;" id="res-ny-name"></div><p class="ts" style="margin-top:3px;font-size:11px;" id="res-ny-desc"></p></div>
@@ -370,8 +370,8 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
       <div class="stitle">智慧系統配對</div>
       <div id="res-wisdom-lock" class="locked-box" style="display:none;">
         <div class="lock-icon">🔒</div>
-        <p>星途藍圖™ + 生命密碼™ · 你的前2層智慧解析</p>
-        <div class="lock-tier">🥈 銀牌解鎖 · 🥇 金牌全解鎖6大系統</div>
+        <p>星途藍圖™ + 生命密碼™ · 前2層智慧解析</p>
+        <div class="lock-tier">🥈 銀牌解鎖 · 🥇 金牌全解鎖</div>
       </div>
       <div id="res-wisdom-full" style="display:none;">
         <!-- Tab nav -->
@@ -395,7 +395,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
     </div>
 
     <div id="law-browse">
-      <div class="fg"><label class="fl">選擇州份</label>
+      <div class="fg"><label class="fl">Your state</label>
         <select id="law-state" class="fs" onchange="onStateChange()">
           <option value="">— 選擇州份 —</option>
           <option value="CA">California</option><option value="NY">New York</option>
@@ -405,20 +405,20 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
           <option value="NV">Nevada</option><option value="OR">Oregon</option>
         </select>
       </div>
-      <div class="fl" style="margin-bottom:6px;">主題</div>
+      <div class="fl" style="margin-bottom:6px;">Topic</div>
       <div class="topic-grid" id="topic-grid">
-        <button class="topic-btn" onclick="sel主題('wage',this)">💵 最低工資</button>
-        <button class="topic-btn" onclick="sel主題('overtime',this)">⏰ 加班規定</button>
-        <button class="topic-btn" onclick="sel主題('sick',this)">🏥 帶薪病假</button>
-        <button class="topic-btn" onclick="sel主題('noncompete',this)">📋 競業禁止</button>
-        <button class="topic-btn" onclick="sel主題('termination',this)">🚪 終止雇用</button>
-        <button class="topic-btn" onclick="sel主題('ai',this)">🤖 AI招募法規</button>
+        <button class="topic-btn" onclick="selTopic('wage',this)">💵 最低工資</button>
+        <button class="topic-btn" onclick="selTopic('overtime',this)">⏰ 加班規定</button>
+        <button class="topic-btn" onclick="selTopic('sick',this)">🏥 帶薪病假</button>
+        <button class="topic-btn" onclick="selTopic('noncompete',this)">📋 競業禁止</button>
+        <button class="topic-btn" onclick="selTopic('termination',this)">🚪 終止雇用</button>
+        <button class="topic-btn" onclick="selTopic('ai',this)">🤖 AI招募法規</button>
       </div>
-      <button class="btn-p" onclick="doLawLookup()">立即查詢</button>
+      <button class="btn-p" onclick="doLawLookup()">查詢</button>
     </div>
 
     <div id="law-question" style="display:none;">
-      <div class="fg"><label class="fl">選擇州份</label>
+      <div class="fg"><label class="fl">Your state</label>
         <select id="law-q-state" class="fs">
           <option value="">— 選擇州份 —</option>
           <option value="CA">California</option><option value="NY">New York</option>
@@ -428,7 +428,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
           <option value="NV">Nevada</option><option value="OR">Oregon</option>
         </select>
       </div>
-      <div class="fg"><label class="fl">描述你的情況</label>
+      <div class="fg"><label class="fl">Describe your situation</label>
         <textarea id="law-q-text" class="fi" style="resize:vertical;min-height:72px;" placeholder="e.g. My manager is asking me to work 10+ hour days without overtime pay in California. Is this legal?"></textarea>
       </div>
       <button class="btn-p" onclick="doLawQuestion()">獲取法律背景</button>
@@ -452,7 +452,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
     </div>
     <div style="text-align:center;padding:.2rem 0;font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.2rem;opacity:.6;">vs.</div>
     <div style="background:rgba(255,255,255,.03);border:1px solid var(--border-s);border-radius:10px;padding:.9rem;margin-bottom:.9rem;">
-      <div style="font-size:9px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:.6rem;">對方</div>
+      <div style="font-size:9px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:.6rem;">The Other Person</div>
       <div class="frow">
         <div class="fg"><label class="fl">Zodiac</label><select id="p2z" class="fs"><option value="">請選擇</option></select></div>
         <div class="fg"><label class="fl">生肖</label><select id="p2a" class="fs"><option value="">請選擇</option></select></div>
@@ -462,16 +462,16 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
   </div>
   <div id="combo-res" style="display:none;">
     <div class="card gold-card" style="margin-top:4px;">
-      <div class="stitle">相容性指數</div>
+      <div class="stitle">Compatibility Index</div>
       <div class="cbar-wrap" id="combo-bars"></div>
     </div>
     <div class="card" style="margin-top:4px;">
-      <div class="stitle">勝算情報™ 策略</div>
+      <div class="stitle">Victory Intel™ Strategy</div>
       <div id="combo-advice"></div>
     </div>
     <div id="combo-lock" class="locked-box" style="display:none;margin-top:4px;">
       <div class="lock-icon">🔒</div>
-      <p>完整相容性報告 + 能量羅盤配對 + 行為矩陣分析</p>
+      <p>Full compatibility report + Flux Compass pairing + DISC analysis</p>
       <div class="lock-tier">🥇 金牌解鎖</div>
     </div>
   </div>
@@ -486,25 +486,25 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
   </div>
 
   <div class="pc">
-    <div class="pc-top"><div><div class="pc-name" style="color:rgba(255,255,255,.6);">Free</div></div><div><div class="pc-price" style="color:rgba(255,255,255,.5);">$0</div></div></div>
-    <ul class="pc-feats"><li>Sign + 生肖 + Element name</li><li>Career preview (first line only)</li><li>Daily quote (fixed, 1 per day)</li><li>Compatibility score (number only)</li></ul>
+    <div class="pc-top"><div><div class="pc-name" style="color:rgba(255,255,255,.6);">免費</div></div><div><div class="pc-price" style="color:rgba(255,255,255,.5);">$0</div></div></div>
+    <ul class="pc-feats"><li>Sign + Chinese Zodiac + Element name</li><li>Career preview (first line only)</li><li>Daily quote (fixed, 1 per day)</li><li>Compatibility score (number only)</li></ul>
   </div>
 
   <div class="pc">
     <div class="pc-top"><div><div class="pc-name" style="color:var(--copper-l);">🥉 Bronze</div><div class="pc-period">每月 · 隨時取消</div></div><div class="pc-price" style="color:var(--copper-l);">$9.99</div></div>
-    <ul class="pc-feats"><li>完整職場基因分析</li><li>Lucky codes, colors & accessories</li><li>每日金句無限刷新</li><li>12星座每日能量提示</li><li>每週能量羅盤™完整解析</li><li>Root Guidance™ + Tao Wisdom™</li><li>美國州法 — 基礎查詢</li></ul>
+    <ul class="pc-feats"><li>Full career DNA analysis</li><li>Lucky codes, colors & accessories</li><li>Unlimited daily quote refresh</li><li>12 signs daily energy tips</li><li>Weekly Flux Compass™ full reading</li><li>Root Guidance™ + Tao Wisdom™</li><li>U.S. state law — basic lookup</li></ul>
     <button class="btn-p" style="background:linear-gradient(135deg,var(--copper),var(--gold-d));margin-top:.8rem;">開始7天免費試用</button>
   </div>
 
   <div class="pc feat">
-    <div class="pc-top"><div><div class="pc-name" style="color:var(--silver2-l);">🥈 Silver</div><div class="pc-period">每月 · 年繳省$60</div></div><div class="pc-price" style="color:var(--silver2-l);">$19.99</div></div>
-    <ul class="pc-feats"><li>包含銅牌所有功能</li><li>納音五行 deep reading</li><li>星途藍圖™ — 你的職場原型</li><li>生命密碼™ — 數字路徑分析</li><li>相容性分析（每月5次）</li><li>每日多系統智慧洞察</li><li>國曆/農曆雙曆模式</li><li>美國州法 — 完整主題覆蓋</li></ul>
+    <div class="pc-top"><div><div class="pc-name" style="color:var(--silver2-l);">🥈 Silver</div><div class="pc-period">per month · annual saves $60</div></div><div class="pc-price" style="color:var(--silver2-l);">$19.99</div></div>
+    <ul class="pc-feats"><li>Everything in Bronze</li><li>Nayin Element deep reading</li><li>Star Blueprint™ — your career archetype</li><li>Life Code™ — numeric path analysis</li><li>Compatibility analysis (5×/month)</li><li>Daily multi-system wisdom</li><li>Solar/Lunar dual calendar mode</li><li>U.S. state law — full topic coverage</li></ul>
     <button class="btn-p" style="background:linear-gradient(135deg,var(--silver2),#5A8EAE);margin-top:.8rem;">開始7天免費試用</button>
   </div>
 
   <div class="pc">
-    <div class="pc-top"><div><div class="pc-name" style="color:var(--gold-l);">🥇 Gold</div><div class="pc-period">每月 · 年繳省$120</div></div><div class="pc-price" style="color:var(--gold-l);">$39.99</div></div>
-    <ul class="pc-feats"><li>包含銀牌所有功能</li><li>6大情報系統™全解鎖</li><li>原型透鏡™ + 行為矩陣™</li><li>能量之門™ + 命令場™</li><li>無限次相容性分析</li><li>美國法律 — 含姐的HR實戰觀點</li><li>每月職場預測報告</li></ul>
+    <div class="pc-top"><div><div class="pc-name" style="color:var(--gold-l);">🥇 Gold</div><div class="pc-period">per month · annual saves $120</div></div><div class="pc-price" style="color:var(--gold-l);">$39.99</div></div>
+    <ul class="pc-feats"><li>Everything in Silver</li><li>All 6 Intelligence Systems™ unlocked</li><li>Archetype Lens™ + Behavior Matrix™</li><li>Energy Gate™ + Command Field™</li><li>Unlimited compatibility analysis</li><li>U.S. law — Sis's HR take included</li><li>Monthly career forecast report</li></ul>
     <button class="btn-p" style="margin-top:.8rem;">開始7天免費試用</button>
   </div>
 
@@ -522,7 +522,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
   </button>
   <button class="nav-btn" onclick="goPage('analyze',this)">
     <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    藍圖
+    Blueprint
   </button>
   <button class="nav-btn" onclick="goPage('combo',this)">
     <svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><circle cx="17" cy="7" r="4"/><path d="M1 20v-2a7 7 0 0 1 7-7h8a7 7 0 0 1 7 7v2"/></svg>
@@ -1950,7 +1950,7 @@ var TIER='free';
 var TL={free:0,copper:1,silver:2,gold:3};
 var gte=function(t){return TL[TIER]>=TL[t];};
 var calMode='solar';
-var cur主題='';
+var curTopic='';
 
 // DATA
 var ZD=[
@@ -2144,7 +2144,7 @@ var DISC_DB = {
   Pisces:     {disc:'S/I — Steadiness + Influence',mbti:'INFP / ENFP',style:'Creative, empathic, collaborative. Best work in psychologically safe, values-aligned environments.',collab:'Make space for their process. Don\'t mistake thoughtfulness for slowness.',receive:'Connect the work to meaning and impact. The why motivates more than the what.',conflict:'Absorbs conflict rather than addresses it. Can leave rather than confront.',manage:'Values alignment is non-negotiable for retention.',hr:'Sis\'s read: S/I Pisces are often your most creative assets doing work that doesn\'t use their creativity. The fix is structural — redesign the role, not the person.'}
 };
 
-// 5. Elemental Strategy — Plum Blossom Numerology (8 Trigrams × 生肖)
+// 5. Elemental Strategy — Plum Blossom Numerology (8 Trigrams × Chinese Zodiac)
 var MEIHUA_DB = {
   Rat:    {gua:'坎 ☵',name:'The Abyss',nature:'Water: Deep, adaptive, dangerous if underestimated.',career:'You\'re the deep strategist. Your power is in what you know that others don\'t. Information, timing, and patience are your career weapons.',timing:'Winter · Q4 · End-cycles',hr:'Sis\'s read: You win by knowing more. Invest in your information network as deliberately as your skill set.'},
   Ox:     {gua:'艮 ☶',name:'The Mountain',nature:'Earth: Immovable, enduring, the foundation everything rests on.',career:'Your reliability is your brand. Organizations pivot around you without noticing. Your consistency is compound interest that eventually makes you irreplaceable.',timing:'Late Winter · Consolidation phases',hr:'Sis\'s read: Mountain energy is invisible until it\'s gone. Document your contributions and make your consistency legible to decision-makers.'},
@@ -2323,7 +2323,7 @@ function switchCal(m,btn){
   document.getElementById('cb-l').classList.toggle('on',m==='lunar');
   document.getElementById('lunar-note').style.display=m==='lunar'?'block':'none';
   document.getElementById('cal-note').textContent=m==='solar'?'Enter Gregorian birthday → auto-calculates zodiac, Chinese zodiac & element':'Enter lunar calendar date → Chinese zodiac & element use lunar year; zodiac sign uses month+1 (approximate)';
-  document.getElementById('ml').textContent=m==='solar'?'出生月份':'Lunar month';
+  document.getElementById('ml').textContent=m==='solar'?'Birth month':'Lunar month';
 }
 
 // ZODIAC
@@ -2371,7 +2371,7 @@ function doAnalyze(){
     var colors={Wood:'#7ECFA0',Fire:'#F8A070',Earth:'#D4AA70',Metal:'#E8D5A3',Water:'#90B8F8'};
     document.getElementById('res-ny-orb').style.color=colors[n.el]||'var(--gold-l)';
   }
-  // 職場基因 — always populate regardless of n
+  // Career DNA — always populate regardless of n
   var el = n ? n.el : 'Metal';
   var cd = getCareerData(z, a, g==='F'?'F':'M', el);
   document.getElementById('res-career-preview').textContent = cd ? cd.t : 'Unique combination — explore your full blueprint.';
@@ -2500,8 +2500,8 @@ function refreshQ(){
 function initCombo(){
   var zo=ZD.map(function(z){return'<option value="'+z.n+'">'+z.e+' '+z.n+'</option>';}).join('');
   var ao=AN.map(function(a){return'<option value="'+a+'">'+a+'</option>';}).join('');
-  ['p1z','p2z'].forEach(function(id){document.getElementById(id).innerHTML='<option value="">請選擇</option>'+zo;});
-  ['p1a','p2a'].forEach(function(id){document.getElementById(id).innerHTML='<option value="">請選擇</option>'+ao;});
+  ['p1z','p2z'].forEach(function(id){document.getElementById(id).innerHTML='<option value="">Select</option>'+zo;});
+  ['p1a','p2a'].forEach(function(id){document.getElementById(id).innerHTML='<option value="">Select</option>'+ao;});
 }
 
 function doCombo(){
@@ -2527,7 +2527,7 @@ function doCombo(){
 }
 
 // LAW
-var curLaw主題='';
+var curLawTopic='';
 function lawMode(m,btn){
   document.getElementById('law-browse').style.display=m==='browse'?'block':'none';
   document.getElementById('law-question').style.display=m==='question'?'block':'none';
@@ -2535,17 +2535,17 @@ function lawMode(m,btn){
   btn.classList.add('on');
   document.getElementById('law-result').innerHTML='';
 }
-function onStateChange(){if(curLaw主題)doLawLookup();}
-function sel主題(t,btn){
-  curLaw主題=t;
+function onStateChange(){if(curLawTopic)doLawLookup();}
+function selTopic(t,btn){
+  curLawTopic=t;
   document.querySelectorAll('.topic-btn').forEach(function(b){b.classList.remove('on');});
   btn.classList.add('on');
 }
 function doLawLookup(){
   var state=document.getElementById('law-state').value;
   if(!state){alert('Please select a state.');return;}
-  if(!curLaw主題){alert('Please select a topic.');return;}
-  renderLaw(state,curLaw主題,null);
+  if(!curLawTopic){alert('Please select a topic.');return;}
+  renderLaw(state,curLawTopic,null);
 }
 function doLawQuestion(){
   var state=document.getElementById('law-q-state').value;
@@ -2569,7 +2569,7 @@ function renderLaw(state,topic,question){
   if(gte('silver')){
     sisTake='<div class="sis-take"><div class="sis-take-label">SIS\'S HR TAKE · 20 YRS U.S. EXPERIENCE</div><div class="sis-take-text">'+sd.sis+'</div></div>';
   } else {
-    sisTake='<div class="locked-box"><div class="lock-icon">🔒</div><p>Sis\'s 20-year HR perspective on this law</p><div class="lock-tier">🥈 銀牌解鎖</div></div>';
+    sisTake='<div class="locked-box"><div class="lock-icon">🔒</div><p>Sis\'s 20-year HR perspective on this law</p><div class="lock-tier">🥈 Silver unlocks</div></div>';
   }
   var questionNote=question?'<div style="font-size:11px;color:var(--silver);background:rgba(255,255,255,.04);padding:7px 10px;border-radius:8px;margin-bottom:10px;">Your situation identified as: <strong style="color:var(--gold-l);">'+TOPIC_LABELS[topic]+'</strong></div>':'';
   document.getElementById('law-result').innerHTML='<div class="card law-result">'+questionNote+'<div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;"><span style="font-size:12px;font-weight:500;background:rgba(200,164,90,.15);color:var(--gold-l);padding:3px 10px;border-radius:100px;">'+STATE_NAMES[state]+'</span><span style="font-size:11px;color:var(--silver);">'+TOPIC_LABELS[topic]+'</span>'+diffBadge+'</div>'+
@@ -2589,7 +2589,7 @@ function applyTier(){
   var zg=document.getElementById('zodiac-grid');
   var zgl=document.getElementById('zodiac-grid-lock');
   if(zg&&zgl){zg.style.display=gte('copper')?'grid':'none';zgl.style.display=gte('copper')?'none':'block';}
-  // analyze — 幸運色 always shown after reveal; Accessory+Code need Bronze
+  // analyze — Lucky Color always shown after reveal; Accessory+Code need Bronze
   var hasResult = document.getElementById('res-career-preview').textContent.length > 0;
   show('res-career-lock', !hasResult);
   show('res-career-full', hasResult);
@@ -2624,7 +2624,7 @@ function applyTier(){
       var note=document.createElement('div');
       note.id='ws-silver-note';
       note.style.cssText='margin-top:.6rem;padding:.5rem .7rem;background:rgba(200,164,90,.07);border-radius:8px;font-size:9px;color:var(--gold-l);text-align:center;';
-      note.innerHTML='🥇 金牌解鎖 Archetype Lens™, Behavior Matrix™, Energy Gate™ & Command Field™';
+      note.innerHTML='🥇 Gold unlocks Archetype Lens™, Behavior Matrix™, Energy Gate™ & Command Field™';
       var wsc=document.getElementById('ws-content');
       if(wsc) wsc.after(note);
     }
