@@ -464,7 +464,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
           <div style="font-size:26px;">💬</div>
           <div style="flex:1;">
             <div style="font-size:12px;font-weight:600;color:var(--gold-l);">Ask Sis — Workplace Relationship Advisor</div>
-            <div class="ts" style="margin-top:2px;font-size:10px;" id="chat-quota-label">Silver: 1 question · 5 min · Gold: 3 questions · 5 min</div>
+            <div class="ts" style="margin-top:2px;font-size:10px;" id="chat-quota-label">Silver: 1/month · Gold: 3/month</div>
           </div>
           <button class="btn-p" style="width:auto;padding:8px 14px;font-size:11px;" onclick="openSisChat()">Ask Now</button>
         </div>
@@ -2624,24 +2624,45 @@ function applyTier(){
 }
 
 
+
 // ── SIS CHAT ──
 var _chatSession = {active:false, qUsed:0, qMax:0, timer:null, timeLeft:0, context:''};
 
+function _getChatMonthKey(){ var d=new Date(); return d.getFullYear()+'-'+(d.getMonth()+1); }
+function _getChatCooldownKey(){ return 'sis_cd'; }
+function _getChatUsageKey(){ return 'sis_usage_'+_getChatMonthKey(); }
+
 function openSisChat(){
   if(!gte('silver')){alert('Upgrade to Silver or Gold to access Sis.');return;}
+
   var maxQ = gte('gold') ? 3 : 1;
-  _chatSession = {active:true, qUsed:0, qMax:maxQ, timer:null, timeLeft:300, context:''};
-  
-  // Build context from current combo
+  var usedThisMonth = parseInt(window.sessionStorage ? (sessionStorage.getItem(_getChatUsageKey())||'0') : '0');
+
+  if(usedThisMonth >= maxQ){
+    var msg = gte('gold') ? 'You have used all 3 Gold consultations this month. See you next month.' : 'You have used your Silver consultation this month. Upgrade to Gold for more.';
+    alert(msg); return;
+  }
+
+  // 20-min cooldown (hidden)
+  var lastSession = parseInt(window.sessionStorage ? (sessionStorage.getItem(_getChatCooldownKey())||'0') : '0');
+  var now = Date.now();
+  if(lastSession > 0 && (now - lastSession) < 20*60*1000){
+    var waitMin = Math.ceil((20*60*1000 - (now - lastSession)) / 60000);
+    alert('Please wait '+waitMin+' more minute(s) before starting a new session.');
+    return;
+  }
+
+  _chatSession = {active:true, qUsed:0, qMax:maxQ - usedThisMonth, timer:null, timeLeft:300, context:''};
+
   var z1=document.getElementById('p1z').value;
   var a1=document.getElementById('p1a').value;
   var z2=document.getElementById('p2z').value;
   var a2=document.getElementById('p2a').value;
   var ctx = z1&&a1&&z2&&a2
-    ? 'Current compatibility: You ('+z1+' × '+a1+') with '+z2+' × '+a2+'.'
+    ? 'Current pairing: You ('+z1+' x '+a1+') with '+z2+' x '+a2+'.'
     : 'General workplace relationship question.';
   _chatSession.context = ctx;
-  
+
   document.getElementById('chat-context').textContent = ctx;
   document.getElementById('chat-messages').innerHTML = '';
   document.getElementById('chat-input').value = '';
@@ -2659,6 +2680,7 @@ function openSisChat(){
 function closeSisChat(){
   if(_chatSession.timer) clearInterval(_chatSession.timer);
   _chatSession.active = false;
+  if(window.sessionStorage) sessionStorage.setItem(_getChatCooldownKey(), Date.now().toString());
   document.getElementById('sis-chat-modal').style.display='none';
 }
 
@@ -2671,7 +2693,8 @@ function startChatTimer(){
     updateTimerDisplay();
     if(_chatSession.timeLeft <= 0){
       clearInterval(_chatSession.timer);
-      endChatSession("Time's up — your 5-minute session has ended.");
+      if(window.sessionStorage) sessionStorage.setItem(_getChatCooldownKey(), Date.now().toString());
+      endChatSession("Time's up — your session has ended. Thank you for consulting Sis.");
     }
   }, 1000);
 }
@@ -2679,23 +2702,19 @@ function startChatTimer(){
 function updateTimerDisplay(){
   var m = Math.floor(_chatSession.timeLeft/60);
   var s = _chatSession.timeLeft % 60;
-  document.getElementById('chat-timer-display').textContent = 
+  document.getElementById('chat-timer-display').textContent =
     'Time remaining: ' + m + ':' + (s<10?'0':'') + s;
 }
 
 function updateChatUI(){
   var remaining = _chatSession.qMax - _chatSession.qUsed;
-  document.getElementById('chat-q-remaining').textContent = 
-    remaining + ' question' + (remaining!==1?'s':'') + ' left';
-  var label = gte('gold')
-    ? 'Gold: ' + _chatSession.qMax + ' questions · 5 min session'
-    : 'Silver: 1 question · 5 min session';
-  document.getElementById('chat-quota-label').textContent = label;
+  document.getElementById('chat-q-remaining').textContent = remaining + (remaining===1?' question':' questions') + ' left';
 }
 
 function endChatSession(msg){
   _chatSession.active = false;
   if(_chatSession.timer) clearInterval(_chatSession.timer);
+  if(window.sessionStorage) sessionStorage.setItem(_getChatCooldownKey(), Date.now().toString());
   document.getElementById('chat-input-area').style.display='none';
   document.getElementById('chat-done-msg').style.display='block';
   document.getElementById('chat-done-msg').textContent = msg;
@@ -2732,23 +2751,28 @@ function removeTypingIndicator(){
 async function sendSisChat(){
   if(!_chatSession.active){return;}
   if(_chatSession.qUsed >= _chatSession.qMax){
-    endChatSession("You have used all your questions for this session. Upgrade to Gold for more.");
+    endChatSession("You have used all your questions for this session. Thank you for consulting Sis.");
     return;
   }
   var q = document.getElementById('chat-input').value.trim();
   if(!q){return;}
-  
+
   _chatSession.qUsed++;
+  if(window.sessionStorage){
+    var used = parseInt(sessionStorage.getItem(_getChatUsageKey())||'0');
+    sessionStorage.setItem(_getChatUsageKey(), (used+1).toString());
+  }
+
   document.getElementById('chat-input').value='';
   document.getElementById('chat-char-count').textContent='0 / 500';
   document.getElementById('chat-send-btn').disabled=true;
   addChatMsg('user', q);
   updateChatUI();
   addTypingIndicator();
-  
+
   try{
-    var systemPrompt = "You are Sis, a sharp and direct career advisor with 20 years of U.S. HR experience. You specialize in workplace relationships, interpersonal dynamics, and career strategy. You combine Eastern wisdom traditions with Western HR practice. Keep responses concise (under 150 words), practical, and direct — no fluff. Always end with one concrete action the person can take today. Context: " + _chatSession.context;
-    
+    var systemPrompt = "You are Sis, a sharp and direct career advisor with 20 years of U.S. HR experience. You specialize in workplace relationships, interpersonal dynamics, and career strategy. Keep responses under 150 words, practical and direct. Always end with one concrete action. Context: " + _chatSession.context;
+
     var response = await fetch('https://api.anthropic.com/v1/messages', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -2759,14 +2783,14 @@ async function sendSisChat(){
         messages:[{role:'user',content:q}]
       })
     });
-    
+
     var data = await response.json();
     removeTypingIndicator();
-    var reply = data.content && data.content[0] ? data.content[0].text : 'Unable to connect. Please try again.';
+    var reply = data.content && data.content[0] ? data.content[0].text : 'Connection error. Please try again.';
     addChatMsg('sis', reply);
-    
+
     if(_chatSession.qUsed >= _chatSession.qMax){
-      endChatSession("You have used all your questions for this session. Upgrade to Gold for more.");
+      endChatSession("You have used all your monthly consultations. Thank you for consulting Sis.");
     } else {
       document.getElementById('chat-send-btn').disabled=false;
       document.getElementById('chat-input').focus();
@@ -2777,6 +2801,7 @@ async function sendSisChat(){
     document.getElementById('chat-send-btn').disabled=false;
   }
 }
+
 
 // INIT
 initToday();

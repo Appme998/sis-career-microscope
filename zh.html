@@ -484,7 +484,7 @@ footer{text-align:center;padding:1.2rem;border-top:1px solid var(--border-s);fon
           <div style="font-size:26px;">💬</div>
           <div style="flex:1;">
             <div style="font-size:12px;font-weight:600;color:var(--gold-l);">問姐 — 職場人際關係諮詢</div>
-            <div class="ts" style="margin-top:2px;font-size:10px;" id="chat-quota-label">銀牌：每次1問 · 5分鐘 · 金牌：每次3問 · 5分鐘</div>
+            <div class="ts" style="margin-top:2px;font-size:10px;" id="chat-quota-label">銀牌每月1次 · 金牌每月3次</div>
           </div>
           <button class="btn-p" style="width:auto;padding:8px 14px;font-size:11px;" onclick="openSisChat()">立即諮詢</button>
         </div>
@@ -2437,31 +2437,31 @@ var HEXAGRAMS=[
 
 // 1. Eastern Star System — Purple Star Astrology
 var ZIWEI_STARS = {
-  Aries:      {star:'貪狼星',palace:'命宮',arch:'The Charismatic Pioneer',s:'Unstoppable drive to initiate. Natural at creating momentum where none exists.',b:'Loses interest after launch. Needs partners who execute what you ignite.',hr:'Sis\'s read: You\'re the spark. Every great team needs one — but learn to hand off cleanly. The best leaders I\'ve placed build a "number two" who completes what they start.'},
-  Taurus:     {star:'武曲星',palace:'財帛宮',arch:'The Strategic Accumulator',s:'Unmatched financial instinct and resource management. Builds wealth quietly and deliberately.',b:'Can appear stubborn or slow to others operating at a faster pace.',hr:'Sis\'s read: Your instinct on compensation and resource allocation is genuinely rare. In negotiations, trust your gut — then slow down and document the logic so others can follow.'},
-  Gemini:     {star:'天機星',palace:'兄弟宮',arch:'The Adaptive Strategist',s:'Reads shifting environments instantly. Thrives in ambiguity and transformation.',b:'Scatters energy across too many ideas. Needs structure to convert intelligence into results.',hr:'Sis\'s read: Geminis often undervalue their own strategic clarity. The challenge isn\'t thinking — it\'s committing. Pick one direction per quarter and go deep.'},
-  Cancer:     {star:'太陰星',palace:'夫妻宮',arch:'The Culture Architect',s:'Builds loyalty and emotional safety that retains talent. Intuitively reads team dynamics.',b:'Avoids confrontation to preserve harmony — sometimes at the cost of necessary change.',hr:'Sis\'s read: Your ability to hold space for people IS a leadership skill. Own it explicitly in every performance conversation and job interview.'},
-  Leo:        {star:'太陽星',palace:'官祿宮',arch:'The Luminous Leader',s:'Commands rooms naturally. Inspires teams with vision and generosity of spirit.',b:'Can centralize too much — builds dependence instead of capability in others.',hr:'Sis\'s read: The mark of a truly great Leo leader is developing people who surpass them. That\'s legacy. Start that project now.'},
-  Virgo:      {star:'天府星',palace:'財帛宮',arch:'The Systems Perfectionist',s:'Creates order from chaos. The operational backbone every organization secretly depends on.',b:'Analysis paralysis. Can optimize endlessly without shipping.',hr:'Sis\'s read: "Done is better than perfect" is a Virgo\'s hardest lesson and most important career move. What\'s the 80% version you can release today?'},
-  Libra:      {star:'廉貞星',palace:'子女宮',arch:'The Diplomatic Powerbroker',s:'Masters relationship capital. Gets things done through networks others can\'t access.',b:'Conflict aversion disguised as diplomacy. Sometimes avoids the necessary hard conversation.',hr:'Sis\'s read: Your greatest career leap happens when you realize that having the hard conversation IS the diplomatic move. Avoiding it creates the conflict it\'s trying to prevent.'},
-  Scorpio:    {star:'七殺星',palace:'遷移宮',arch:'The Transformational Force',s:'Penetrating insight. Ability to read power dynamics and restructure them.',b:'Operates with intensity that can alienate collaborative environments.',hr:'Sis\'s read: The Scorpios who rise highest learn to dial the intensity to the context. Full power in the boardroom. Softer touch in the team meeting. That range is elite.'},
-  Sagittarius:{star:'破軍星',palace:'官祿宮',arch:'The Visionary Disruptor',s:'Breaks outdated structures and creates space for what\'s next. Thrives in transformation.',b:'Destroys before the new is ready. Can leave wreckage in their wake.',hr:'Sis\'s read: Before breaking a system, know what you\'re replacing it with. The most effective disruptors always had the next architecture ready before the demolition.'},
-  Capricorn:  {star:'天相星',palace:'官祿宮',arch:'The Institutional Builder',s:'Long-game thinking. Builds structures that outlast them. Trusted with the highest responsibility.',b:'Can become the system they once wanted to change. Rigidity sets in.',hr:'Sis\'s read: Schedule a "still relevant?" audit every 6 months. Your greatest strength — consistency — becomes your limitation if it isn\'t periodically challenged.'},
-  Aquarius:   {star:'天梁星',palace:'父母宮',arch:'The Principled Innovator',s:'Sees structural flaws others normalize. Fights for systemic fairness with unusual persistence.',b:'Can become self-righteous. Loses allies when they could have won them.',hr:'Sis\'s read: The change-makers I\'ve admired most understood that influencing the system requires working within it first. Strategic patience isn\'t compromise — it\'s effectiveness.'},
-  Pisces:     {star:'紫微星',palace:'命宮',arch:'The Intuitive Visionary',s:'Sees connections between things others treat as separate. Creative and deeply empathic leadership.',b:'Boundary struggles. Absorbs others\' problems and loses sight of own direction.',hr:'Sis\'s read: Pisces leaders give so much that they sometimes forget to protect their own energy. The "no" you say to the wrong opportunity is the "yes" to the right one.'}
+  Aries:      {star:'貪狼星',palace:'命宮',arch:'熱情開創者',s:'天生的行動力和創業精神，最擅長在空白中創造動能。',b:'熱情來得快去得也快，啟動後需要能落地的夥伴接棒。',hr:'姐說：你是那根火柴。每個好團隊都需要一根——但要學會乾淨地交棒。最好的領導者會培養一個能執行的副手。'},
+  Taurus:     {star:'天府星',palace:'田宅宮',arch:'穩健建設者',s:'有耐心且以品質為導向，能在動盪中創造穩定。你的可靠性是競爭優勢。',b:'抗拒變化到了阻礙成長的程度，有時需要被推一把。',hr:'姐說：穩定有其市場價值——但在快速變化的環境中，要把靈活性列入你的技能清單。'},
+  Gemini:     {star:'天機星',palace:'兄弟宮',arch:'靈活溝通者',s:'能在他人看不見的地方連結看似無關的點，是跨領域的天才。',b:'精力分散在太多方向，深度是你需要培養的能力。',hr:'姐說：你是會議室裡最快的大腦。把那股能量導向一個方向，你的影響力將倍增。'},
+  Cancer:     {star:'太陰星',palace:'夫妻宮',arch:'直覺守護者',s:'高情商，天生理解他人的需求——往往連對方自己都沒意識到。',b:'對自身需求過於保護，有時顯得情緒化。',hr:'姐說：你的同理心是職場超能力，但要先照顧好自己。你無法從空杯子裡倒水。'},
+  Leo:        {star:'紫微星',palace:'命宮',arch:'天生領袖',s:'渾然天成的指揮中心，人們本能地尋求你的方向和認可。',b:'需要認可的渴望會遮蔽判斷力，留意你的自我保護機制。',hr:'姐說：你天生就是領導者。培養那個給你真實回饋的人——那個不只告訴你好話的人。'},
+  Virgo:      {star:'天相星',palace:'官祿宮',arch:'精準執行者',s:'能找到他人遺漏的細節，把複雜系統變成清晰流程的天才。',b:'完美主義超過80%就是拖延症換了個好看的名字。',hr:'姐說：你的精確度是天賦。但「夠好」有時候就是正確答案。先發布，再優化。'},
+  Libra:      {star:'天梁星',palace:'遷移宮',arch:'和諧調解者',s:'有讓所有人都感到被聽見的天賦，調解和促成共識的高手。',b:'優柔寡斷在截止日期面前是最貴的奢侈品。',hr:'姐說：你的平衡感是珍貴的。練習為決策設定截止時間——果斷是可以學習的技能。'},
+  Scorpio:    {star:'七殺星',palace:'命宮',arch:'戰略洞察者',s:'能看穿動機和隱藏的動態，在複雜的情境中有精準的洞察力。',b:'傾向把不必要的情況也變成權力鬥爭。',hr:'姐說：你的直覺雷達幾乎無懈可擊。把它用在策略上，而不是用在懷疑上。'},
+  Sagittarius:{star:'武曲星',palace:'財帛宮',arch:'遠見探索者',s:'能看見他人看不見的更大格局，天生的戰略性和跨文化思維。',b:'跳到下一個大想法的速度有時超過完成目前工作的速度。',hr:'姐說：你的視野廣度是稀缺資產。配上一個讓你落地的夥伴，你們將所向披靡。'},
+  Capricorn:  {star:'廉貞星',palace:'官祿宮',arch:'紀律攀登者',s:'長線佈局的大師，別人放棄的地方你才開始發光。你的耐心就是策略。',b:'過於專注終點以至於忘記享受過程。',hr:'姐說：你就是可靠性的代名詞。把這個聲譽變成你的品牌，它會把機會送上門。'},
+  Aquarius:   {star:'天同星',palace:'福德宮',arch:'革新思考者',s:'能看見系統內部的人看不見的外部視角，天生的變革推動者。',b:'想法超前時代有時讓你顯得格格不入，橋接能力需要刻意培養。',hr:'姐說：你就是先行者。練習把你的願景翻譯成其他人能立刻使用的語言。'},
+  Pisces:     {star:'破軍星',palace:'命宮',arch:'共情創造者',s:'直覺是你的職業工具，對人的深度理解讓你在創意和療癒性角色中無可比擬。',b:'邊界是保護你天賦的必要條件，沒有它，你的共情會成為他人踐踏的入口。',hr:'姐說：你的深度是稀有的。設立保護你能量的邊界——這是策略，不是自私。'}
 };
 
 // 2. Numeric Resonance — Numerology (Life Path Number from birth year)
 var NUMEROLOGY_DB = {
-  1:{path:'The Independent Leader',career:'Built to lead from the front. Best work happens when you own the outcome completely.',strength:'Decisive, original, courageous under pressure.',shadow:'Can\'t delegate. Struggles when stripped of autonomy.',hr:'Sis\'s read: The fastest path to a Number 1\'s ceiling is micromanagement — of themselves or by others. Negotiate for autonomy before you negotiate salary.',color:'#FF6B6B'},
-  2:{path:'The Collaborative Architect',career:'Power is relational. You build bridges across factions and make complex groups function.',strength:'Empathy, diplomacy, intuitive conflict resolution.',shadow:'Loses self in others\' agendas. Avoids healthy confrontation.',hr:'Sis\'s read: Number 2s are often under-promoted because they\'re too busy making others shine. Start keeping a wins log and learn to take visible credit for invisible work.',color:'#90B8F8'},
-  3:{path:'The Creative Communicator',career:'Ideas, words, and persuasion are your currency. At your best presenting, pitching, or facilitating.',strength:'Articulate, creative, emotionally magnetic, quick.',shadow:'Scattered. Starts brilliantly and finishes inconsistently.',hr:'Sis\'s read: Number 3s need roles with creative output baked in. If your job has no communication component, something is wrong. Fix the role, not yourself.',color:'#FFD93D'},
-  4:{path:'The Foundation Builder',career:'You build systems that outlast everyone. Your work is the infrastructure others build their success on.',strength:'Reliable, precise, disciplined, excellent under pressure.',shadow:'Can\'t tolerate instability. Resists necessary change.',hr:'Sis\'s read: Number 4s need to negotiate their value explicitly — because you\'ll never promote yourself loudly, and your manager may not notice the quiet excellence until you\'re gone.',color:'#A8D8A8'},
-  5:{path:'The Freedom Catalyst',career:'Thrive in variety, change, and high-stimulation environments. Fast-paced and ambiguous is where you shine.',strength:'Adaptable, persuasive, cross-functional, crisis-resilient.',shadow:'Restless. Leaves just before the compound interest kicks in.',hr:'Sis\'s read: Number 5s often mistake boredom for misalignment. Before you quit, ask: have you actually mastered this, or just gotten comfortable? There\'s a difference.',color:'#F8A070'},
-  6:{path:'The Responsible Nurturer',career:'You hold teams together during turbulence. Your care is genuine — which makes you irreplaceable in culture-first organizations.',strength:'Loyal, responsible, skilled at conflict resolution.',shadow:'Attracts dependency. Burns out serving everyone else first.',hr:'Sis\'s read: You cannot give from an empty cup. Build your boundaries as deliberately as you build relationships — it\'s not selfish, it\'s sustainable.',color:'#D4A8FF'},
-  7:{path:'The Deep Analyst',career:'Your value is depth — the insight, the research, the pattern no one else caught. Work best with space to think and the freedom to go deep.',strength:'Analytical, precise, sees what others miss.',shadow:'Isolates. Overthinks. Struggles in high-touch social environments.',hr:'Sis\'s read: Number 7s often work in the wrong format. If your best thinking happens in writing and your job requires constant verbal performance, that\'s a design problem — not a you problem.',color:'#C9A84C'},
-  8:{path:'The Power Architect',career:'Authority, resources, and large-scale impact are your natural domain. Built for the top or for owning your own thing.',strength:'Strategic, ambitious, financially sophisticated, decisive.',shadow:'Can become domineering. Confuses power with leadership.',hr:'Sis\'s read: The Number 8s who go furthest know the difference between authority earned and authority assumed. Lead through trust first. Power follows.',color:'#D4AA70'},
-  9:{path:'The Humanitarian Leader',career:'Driven by meaning and impact at scale. When aligned with purpose, your output is extraordinary.',strength:'Visionary, compassionate, inspirational, globally minded.',shadow:'Gives everything away. Struggles to sustain personal success.',hr:'Sis\'s read: Your ability to earn big and give big are not in conflict. Both require you to stay. Stop self-sabotaging financial success because you distrust it.',color:'#90E0C0'}
+  1:{path:'先驅者',career:'天生的創業家和開路先鋒，在自主權高的環境中最能發揮。',shadow:'對掌控的需求有時讓你難以授權或接受協助。',strength:'在他人還在評估風險的時候，你已經在行動了。',hr:'姐說：你的獨立性是天賦，但最大的成就往往需要讓別人進來幫忙。'},
+  2:{path:'合作者',career:'在幕後創造和諧，擅長讓不同的人和觀點一起運作。',shadow:'你的和諧需求有時讓你吞下重要的真相。',strength:'你讀取房間的能力讓你在談判和調解中無可替代。',hr:'姐說：你的溫柔力量比你以為的更有影響力。讓它被看見。'},
+  3:{path:'表達者',career:'天生的溝通者，在創意輸出、演講和文字影響方面卓越。',shadow:'注意力分散的傾向讓你難以完成你開始的事。',strength:'你把複雜的想法變得生動易懂的能力是職場中的稀缺資源。',hr:'姐說：你的表達力是天賦。讓它為正確的目標服務，而不只是填滿空間。'},
+  4:{path:'建設者',career:'紀律和可靠是你的超能力，在需要系統和結構的環境中茁壯成長。',shadow:'你的謹慎有時變成阻礙進步的剛硬。',strength:'你完成工作的一致性讓你成為任何組織最有價值的資產之一。',hr:'姐說：你的可靠性是品牌。讓它在高知名度的項目上發光。'},
+  5:{path:'自由探索者',career:'在需要適應性和多樣性的角色中茁壯成長，害怕一成不變。',shadow:'對束縛的恐懼有時讓你在事情變好之前就離開。',strength:'你適應變化的能力在不確定的環境中是無價的。',hr:'姐說：你的靈活性是稀缺的。把它配上足夠的根基，讓它成為你最強的競爭優勢。'},
+  6:{path:'養育者',career:'天生的導師和照顧者，在服務導向和以人為本的角色中發光。',shadow:'對他人的責任感有時超過對自己需求的照顧。',strength:'你讓身邊的人感到被看見和被支持的能力是最有黏性的領導力。',hr:'姐說：你的照顧是天賦。先照顧好你自己，你才能持續照顧別人。'},
+  7:{path:'智慧探尋者',career:'天生的分析師和研究者，在需要深度思考的領域中無可比擬。',shadow:'對完美資訊的追求有時讓你陷入分析癱瘓。',strength:'你的深度和洞察力是大多數人沒有耐心去培養的稀缺能力。',hr:'姐說：你的深度是你的護城河。找到讓它發揮最大影響力的平台。'},
+  8:{path:'豐盛成就者',career:'天生的商業頭腦和執行力，在領導力和資源管理上卓越。',shadow:'對成功的強烈渴望有時讓你忽視過程中的人。',strength:'你把願景轉化為可量化成果的能力讓你在任何商業環境中都有競爭力。',hr:'姐說：你的驅動力是強大的引擎。確保它驅動的方向是你真正想去的地方。'},
+  9:{path:'智慧完成者',career:'天生的大格局思考者，你的人生旅程讓你擁有難以複製的深度和智慧。',shadow:'有時沉浸在過去的傷痛中，而不是把它轉化為前進的力量。',strength:'你對人類經驗的理解深度讓你成為最有同理心的領導者。',hr:'姐說：你走過的路是你最獨特的資產。不要低估那些繞路的課題帶給你的禮物。'}
 };
 
 function getLifePathNum(year) {
@@ -2472,66 +2472,66 @@ function getLifePathNum(year) {
 
 // 3. 塔羅職場原型 — Tarot Major Arcana (traditional zodiac-card correspondence)
 var TAROT_DB = {
-  Aries:      {card:'The Emperor',num:'IV',arch:'Authority & Structure',career:'Built to lead systems and command authority — not by title, but by genuine mastery of your domain.',power:'Can establish order where chaos reigns. Natural executive energy.',lesson:'True power protects rather than controls. What are you building that outlasts you?',hr:'Sis\'s read: Emperor energy is most powerful when it creates other leaders. Who on your team are you actively developing right now?',color:'#C9A84C'},
-  Taurus:     {card:'The Hierophant',num:'V',arch:'Mastery & Tradition',career:'Become the recognized authority in your field. Your career rewards patience and deep expertise.',power:'Institutional trust. The go-to expert. Rare depth that takes years to build.',lesson:'When does tradition become a cage? Know when to honor the old and when to break it.',hr:'Sis\'s read: Hierophant energy means you\'re often the most qualified person who isn\'t at the head of the table. Fix that — start publishing, speaking, making your expertise visible.',color:'#D4AA70'},
-  Gemini:     {card:'The Lovers',num:'VI',arch:'Choice & Connection',career:'Career built on partnerships, communication, and navigating between worlds. Thrive at the intersection of people and ideas.',power:'Bridge-builder. Creates chemistry between disciplines that others can\'t.',lesson:'Every career peak requires a conscious choice. Stop straddling and decide.',hr:'Sis\'s read: The professional who moves fluently between technical and relational worlds is genuinely rare. That\'s you — use it strategically.',color:'#90B8F8'},
-  Cancer:     {card:'The Chariot',num:'VII',arch:'Willpower & Resilience',career:'Beneath the empathic exterior is fierce drive. Emotional resilience is your competitive edge.',power:'Sustained focus through adversity. Wins the long race while others burn out.',lesson:'Direction matters as much as determination. Are you charging toward something or away from something?',hr:'Sis\'s read: Cancer professionals often surprise people — including themselves — with how tough they are when it counts. Own that toughness publicly.',color:'#7ECFA0'},
-  Leo:        {card:'Strength',num:'VIII',arch:'Courage & Mastery',career:'Greatest career moves require courage — not aggression, but the quiet confidence to stay present when things get hard.',power:'Inspiring steadiness. The leader others look to when pressure peaks.',lesson:'Strength that intimidates is wasted. Strength that empowers is legendary.',hr:'Sis\'s read: The Strength Leo is the boss who makes everyone better. Not the boss who makes everyone afraid. Which one are you building toward?',color:'#FFD93D'},
-  Virgo:      {card:'The Hermit',num:'IX',arch:'Wisdom & Discernment',career:'Best work happens in focused depth. The person who actually reads the report, catches the error, sees what everyone else missed.',power:'Unmatched precision. Quiet expertise that speaks louder than self-promotion.',lesson:'Isolation is not neutrality. At some point, the hermit must return with what they\'ve learned.',hr:'Sis\'s read: Virgo Hermits often undershare expertise. The insight you\'ve been refining in private for six months? Share it. Your field needs it.',color:'#A8D8A8'},
-  Libra:      {card:'Justice',num:'XI',arch:'Balance & Ethical Truth',career:'Drawn to roles where fairness, ethics, and balance matter — law, HR, mediation, policy, leadership.',power:'Sees all sides. Makes decisions that hold up over time.',lesson:'Justice delayed is justice denied. Balanced nature can become procrastination in disguise.',hr:'Sis\'s read: Organizations need people who call out imbalance without being political. That\'s you — if you\'re brave enough to use it.',color:'#D4A8FF'},
-  Scorpio:    {card:'Death',num:'XIII',arch:'Transformation & Rebirth',career:'Every major career move involves leaving something behind. You don\'t evolve — you transform.',power:'Can rebuild completely. Emerges from career crises stronger than before.',lesson:'Not everything needs to die to be renewed. Discernment about what to release.',hr:'Sis\'s read: This isn\'t the ending card — it\'s the radical renewal card. Your willingness to let go of what isn\'t working is the exact trait that makes you extraordinary.',color:'#A0A0FF'},
-  Sagittarius:{card:'Temperance',num:'XIV',arch:'Integration & Vision',career:'Synthesize across disciplines, cultures, and perspectives. Highest expression at the intersection of philosophy and action.',power:'Long-range vision. Integrates big-picture thinking with practical wisdom.',lesson:'Patience with process. The alchemy happens in the middle, not just at the destination.',hr:'Sis\'s read: Stop selling yourself as just a "visionary" and start demonstrating the integration skills that make the vision real.',color:'#F8A070'},
-  Capricorn:  {card:'The Devil',num:'XV',arch:'Mastery of Material Reality',career:'Understands how power, money, and institutions actually work. That knowledge is both your superpower and your test.',power:'Pragmatic mastery. Achieves material success through sustained, disciplined effort.',lesson:'What chains are you wearing by choice? Question every "have to" in your career.',hr:'Sis\'s read: Name your chains — the salary keeping you in the wrong role, the title keeping you from the right opportunity. Then decide deliberately.',color:'#C9A84C'},
-  Aquarius:   {card:'The Star',num:'XVII',arch:'Hope & Innovation',career:'Carry the energy of what\'s possible — the future state others can\'t see yet. Career finds meaning in building toward something better.',power:'Infectious optimism grounded in genuine innovation.',lesson:'Stars give light but don\'t force direction. Let people find their own way to your vision.',hr:'Sis\'s read: Star energy creates movements, not just teams. Ask yourself: am I building a team or starting something? The answer changes everything.',color:'#90B8F8'},
-  Pisces:     {card:'The Moon',num:'XVIII',arch:'Intuition & Mystery',career:'Operate with genuine intuition about people, timing, and hidden dynamics. When you trust it, it\'s almost never wrong.',power:'Reads between the lines. Catches what\'s unsaid in any room.',lesson:'Intuition needs grounding. What structures keep you anchored when the feeling is overwhelming?',hr:'Sis\'s read: Stop dismissing your intuitive reads as "just a feeling." Start tracking when your gut was right. The data will change how seriously you — and others — take it.',color:'#D4F0FF'}
+  Aries:      {card:'皇帝',arch:'你帶著天生的掌控感和建立結構的衝動進入任何空間。',power:'在混亂中建立清晰的秩序。',lesson:'真正的權威來自服務，不是支配。',career:'在需要果斷領導力和清晰方向的角色中最能發揮。',hr:'姐說：你天生就是那個掌舵的人。確保你的結構是讓人解放的，而不是限制人的。'},
+  Taurus:     {card:'教皇',arch:'你天生尋求有意義的傳統和真正的專業知識，不只是追逐潮流。',power:'在不確定中找到真正有價值的東西。',lesson:'智慧在分享中倍增，囤積讓它凋萎。',career:'在需要深度專業知識和可靠判斷的職位上卓越。',hr:'姐說：你的知識深度是稀缺的。找到願意珍惜它的舞台。'},
+  Gemini:     {card:'戀人',arch:'你天生在連結不同想法和人之間建立橋樑，直覺地尋找互補。',power:'看見他人之間的潛在協同效應。',lesson:'做出承諾是你成長的邊界——在多個方向上都保持淺層只會分散你的影響力。',career:'在需要溝通、協調和創意合作的職位上最能發光。',hr:'姐說：你的連結能力是天賦。選擇幾個值得深耕的方向，把根紮深。'},
+  Cancer:     {card:'戰車',arch:'你透過情感驅動力前進，意志和保護本能是你最強的動力。',power:'在需要韌性和堅持的時候保持前進。',lesson:'控制是給自己的，不是給外部情況的。',career:'在需要韌性、客戶照顧和長期承諾的職位上卓越。',hr:'姐說：你的驅動力在有意義的使命下最強大。找到你真正相信的工作。'},
+  Leo:        {card:'力量',arch:'你的存在感帶著一種讓他人願意跟隨的磁場，不是靠力量，而是靠魅力。',power:'以溫柔的影響力移動整個團隊。',lesson:'真正的力量在能量管理，不是展示。',career:'在需要啟發他人、建立文化和代表組織的職位上天生卓越。',hr:'姐說：你的磁場是真實的資產。有意識地使用它，讓它往你想要的方向發揮。'},
+  Virgo:      {card:'隱者',arch:'你的智慧來自內向的反思和對細節的深刻關注，你的洞察在安靜中成形。',power:'看見他人錯過的細節和模式。',lesson:'你不需要有所有答案才值得被聽見。',career:'在需要研究、分析、品質控制和深度專業知識的職位上卓越。',hr:'姐說：你的深度是稀缺的。學會分享你的洞察，即使你覺得還沒準備好。'},
+  Libra:      {card:'正義',arch:'你天生尋求公平和平衡，有清晰看見多方觀點的稀有能力。',power:'在複雜的情況中找到公平的解決方案。',lesson:'決策需要行動，而不只是完美的平衡。',career:'在需要公平判斷、調解和倫理決策的職位上卓越。',hr:'姐說：你的公平感是稀缺的。讓它在需要調解和建立信任的時刻發光。'},
+  Scorpio:    {card:'死神',arch:'你天生帶著轉化的力量——你能看見什麼需要結束，什麼需要新生。',power:'帶領個人和組織完成必要的轉型。',lesson:'不是所有東西都需要被改造。學會辨別什麼值得保留。',career:'在需要深度轉型、戰略重組和危機管理的職位上卓越。',hr:'姐說：你的轉化力量是組織最需要的。找到準備好被改變的地方，你的影響力將是歷史性的。'},
+  Sagittarius:{card:'節制',arch:'你天生尋求把不同的元素融合成更大、更有意義的整體。',power:'整合看似矛盾的觀點成為創新的解決方案。',lesson:'宏大的願景需要耐心的實踐才能成真。',career:'在需要戰略整合、跨文化溝通和長期規劃的職位上卓越。',hr:'姐說：你的整合能力是稀缺的。找到需要橋接不同世界的角色，那才是你真正的舞台。'},
+  Capricorn:  {card:'惡魔',arch:'你天生理解物質世界的運作規則，有駕馭現實約束的能力。',power:'在現實的限制下創造真正的成果。',lesson:'最有価值的自由往往來自內在，不是外在條件的改變。',career:'在需要商業頭腦、資源管理和長線思考的職位上卓越。',hr:'姐說：你對現實的掌握是強大的基礎。確保你在建造你真正想要的東西，而不只是你以為應該要的。'},
+  Aquarius:   {card:'星星',arch:'你天生帶著希望和對更好未來的願景，是黑暗中的燈塔。',power:'在困境中保持對可能性的相信。',lesson:'落地和可操作的行動讓夢想成真。',career:'在需要創新、未來思維和激勵他人的職位上卓越。',hr:'姐說：你的願景是禮物。學會把它翻譯成今天可以執行的步驟，讓它從夢想變成現實。'},
+  Pisces:     {card:'月亮',arch:'你天生深潛在直覺和象徵性的理解中，感知他人無法感知的東西。',power:'直覺地感知隱藏的動態和未言明的真相。',lesson:'夢想需要現實的錨點才能落地。',career:'在需要創意、心理洞察和深度人際理解的職位上卓越。',hr:'姐說：你的深度是稀缺的天賦。找到重視直覺洞察的環境，你的影響力將超越你的想像。'}
 };
 
 // 4. DISC × MBTI 職場行為系統
 var DISC_DB = {
-  Aries:      {disc:'D — Dominance',mbti:'ENTJ / ESTP',style:'Direct, decisive, competitive, results-focused.',collab:'Give ownership and clear outcomes. Don\'t micromanage.',receive:'Lead with the bottom line and what you need. Skip the preamble.',conflict:'Goes straight to confrontation from efficiency, not aggression. Interpret directness as respect.',manage:'They need challenge, not comfort. Boredom is your biggest retention risk.',hr:'Sis\'s read: D-types are easiest to lead when you\'re straight with them and hardest when you\'re not. Stop softening feedback. Give it clean and watch performance spike.'},
-  Taurus:     {disc:'C/S — Conscientiousness + Steadiness',mbti:'ISTJ / ISFJ',style:'Reliable, thorough, quality-focused. The person you trust with what actually matters.',collab:'Give time and clear expectations. Don\'t spring last-minute changes.',receive:'Provide context and rationale. They want the why before committing.',conflict:'Avoids unnecessary conflict but holds firm on matters of principle.',manage:'Stability and consistency are retention factors. Communicate changes early.',hr:'Sis\'s read: C/S profiles do the work that holds organizations together. If you\'re not actively recognizing this, you\'re at risk of losing the person you can\'t afford to lose.'},
-  Gemini:     {disc:'I — Influence',mbti:'ENTP / ENFP',style:'Fast-thinking, versatile, excellent communicator. The most adaptable person in the room.',collab:'Engage their mind. Boring them is worse than challenging them.',receive:'Frame as conversation, not directive. They co-create better than they execute mandates.',conflict:'Argues the position, not the person. 參考rames conflict as creative tension.',manage:'Structure is a gift, not a prison — when you frame it that way.',hr:'Sis\'s read: I-type Geminis are often underestimated in hiring because they come across as casual. Don\'t mistake range for lack of depth.'},
-  Cancer:     {disc:'S — Steadiness',mbti:'INFJ / ISFJ',style:'Warm, loyal, emotionally intelligent. The leader who doesn\'t look like one until you need one.',collab:'Build relationship before task. They work hardest for people they trust.',receive:'Acknowledge the person before the project.',conflict:'Absorbs rather than addresses. Needs explicit permission to engage in productive confrontation.',manage:'Psychological safety is not a perk — it\'s a performance condition.',hr:'Sis\'s read: S-type Cancers are often the most important people in teams and the least likely to know it. Tell them explicitly. They don\'t assume.'},
-  Leo:        {disc:'D/I — Dominance + Influence',mbti:'ENFJ / ENTP',style:'Visionary leader who inspires through personality and bold vision.',collab:'Give them the stage. Include in high-visibility projects.',receive:'Frame requests as opportunities for impact. Connect to their larger vision.',conflict:'Expressive but not petty. Addresses issues openly and moves on.',manage:'Recognition drives retention more than compensation. A specific public compliment is worth more than a bonus.',hr:'Sis\'s read: Leo DISC profiles burn out when undervalued publicly. Don\'t save the praise for the annual review. Say it now, in the meeting, in front of the team.'},
-  Virgo:      {disc:'C — Conscientiousness',mbti:'INTJ / INTP',style:'Analytical, precise, quality-obsessed. Sets standards others can\'t match.',collab:'Give the brief in advance. They process before they respond.',receive:'Data and logic over emotion. Provide evidence, not enthusiasm.',conflict:'Addresses issues with facts and process. Can come across as cold — it\'s precision, not indifference.',manage:'Quality recognition matters more than quantity recognition. Comment on the specific thing done well.',hr:'Sis\'s read: C-types often have the highest output and lowest visibility. Build it into their role — make their excellence visible through reporting or demos.'},
-  Libra:      {disc:'S/I — Steadiness + Influence',mbti:'ENFJ / INFJ',style:'People-centered, harmonizing, excellent at building consensus and psychological safety.',collab:'Include them in the human side of decisions. They\'ll tell you what the team won\'t.',receive:'Frame the impact on people. Lead with how this serves the relationship.',conflict:'Goes to great lengths to avoid it — which can be the real problem.',manage:'Culture is a retention factor. They thrive when the environment feels fair.',hr:'Sis\'s read: S/I Libras are often the informal culture carrier — the person who knows how everyone is really doing. That\'s your early warning system. Pay attention.'},
-  Scorpio:    {disc:'D/S — Dominance + Steadiness',mbti:'INTJ / INFJ',style:'Intense, strategic, deeply committed. When they\'re in, they\'re all in.',collab:'Earn their trust before expecting full engagement. They\'re sizing you up longer than you know.',receive:'Be honest. They detect inauthenticity immediately.',conflict:'Holds positions firmly. Will not pretend to agree.',manage:'Give meaningful work with real stakes. Meaningless tasks drain them faster than overwork.',hr:'Sis\'s read: D/S Scorpios are often the most honest feedback-givers — if you\'ve earned the relationship. That candor is worth cultivating. Protect the messenger.'},
-  Sagittarius:{disc:'I/D — Influence + Dominance',mbti:'ENTP / ENFP',style:'High-energy ideator who leads through enthusiasm and big-picture thinking.',collab:'Give them new problems to solve. Pair with implementers.',receive:'Lead with the exciting possibility. Details after buy-in.',conflict:'Prefers to redirect rather than confront.',manage:'Variety and autonomy over stability and structure.',hr:'Sis\'s read: The fastest way to lose a Sagittarius is to put them in a rigid, process-heavy role. The fastest way to keep them is to give them a new challenge every quarter.'},
-  Capricorn:  {disc:'D/C — Dominance + Conscientiousness',mbti:'INTJ / ISTJ',style:'Strategic, disciplined, long-term focused. Combines ambition with analytical rigor.',collab:'Respect their time and expertise. Come prepared.',receive:'Be organized. Have a clear ask. Demonstrate you\'ve thought it through.',conflict:'Direct and principle-driven. Will change position when shown better data.',manage:'Challenge with complexity. Give ownership of outcomes, not just tasks.',hr:'Sis\'s read: D/C types combine vision with execution rigor. They\'re often underpaid because they don\'t advocate loudly. Know their market rate before they do.'},
-  Aquarius:   {disc:'I/C — Influence + Conscientiousness',mbti:'INTP / ENTP',style:'Principle-driven innovator combining analytical thinking with persuasive communication.',collab:'Give them the system-level problem. They\'re wasted on incremental work.',receive:'Appeal to their values and the larger why.',conflict:'Argues the idea, not the person. Escalates when a principle is compromised.',manage:'Autonomy and intellectual respect are the retention keys.',hr:'Sis\'s read: Before labeling an Aquarius "difficult," ask: are they seeing a problem the organization hasn\'t admitted yet?'},
-  Pisces:     {disc:'S/I — Steadiness + Influence',mbti:'INFP / ENFP',style:'Creative, empathic, collaborative. Best work in psychologically safe, values-aligned environments.',collab:'Make space for their process. Don\'t mistake thoughtfulness for slowness.',receive:'Connect the work to meaning and impact. The why motivates more than the what.',conflict:'Absorbs conflict rather than addresses it. Can leave rather than confront.',manage:'Values alignment is non-negotiable for retention.',hr:'Sis\'s read: S/I Pisces are often your most creative assets doing work that doesn\'t use their creativity. The fix is structural — redesign the role, not the person.'}
+  Aries:      {disc:'D型（主導）',mbti:'ENTJ / ESTJ',style:'直接、果斷、以結果為導向。你來這裡是為了完成任務，不是聊天。',collab:'給你自主權和清晰的目標，你會交付超出預期的成果。',reach:'直接切入重點，聚焦結果和時間線。少說背景，多說行動。',stress:'在感到掌控被侵蝕時爆發。給自己降溫的時間，避免在高壓時做重大決定。',motivation:'清晰的目標、自主權和可量化的勝利讓你保持最高能量。'},
+  Taurus:     {disc:'S型（穩定）',mbti:'ISFJ / ISTJ',style:'穩定、可靠、以過程為導向。你的一致性是最強的競爭優勢。',collab:'在穩定的環境和清晰的期望下表現最佳。突然的變化會觸發你的抵抗反應。',reach:'給時間，不要催促。用數據和歷史先例說服你，而不是情緒。',stress:'抗拒那些讓你覺得不穩定的改變。提前給你時間消化，效果會截然不同。',motivation:'穩定性、可預測性和與你的核心價值一致的工作讓你長期投入。'},
+  Gemini:     {disc:'I型（影響）',mbti:'ENTP / ENFP',style:'外向、有說服力、善於建立關係。你在人際能量中充電，想法在對話中成形。',collab:'在協作和多樣化的環境中茁壯成長。單調和孤立讓你窒息。',reach:'讓它感覺像是一次對話，而不是一份備忘錄。用故事和可能性吸引你，而不是規則。',stress:'當被忽視或被過度限制時失去動力。確保你有足夠的社交刺激。',motivation:'多樣性、認可和創意表達是你保持高能量的關鍵。'},
+  Cancer:     {disc:'S型（穩定）/ C型（謹慎）',mbti:'INFJ / INFP',style:'以關係為中心、善解人意、忠誠。你在有意義的連結和貢獻中找到動力。',collab:'在心理安全的環境中表現最佳，需要信任才能全力投入。',reach:'建立真實的關係，然後再要求承諾。你的信任不是自動給的，它需要被贏得。',stress:'在感到不被珍視或環境衝突時退縮。需要被看見才能持續投入。',motivation:'有意義的貢獻、真實的連結和穩定的環境讓你長期茁壯。'},
+  Leo:        {disc:'D型（主導）/ I型（影響）',mbti:'ENFJ / ESTP',style:'有魅力、有遠見、天生的舞台領袖。你的存在感讓整個房間的能量改變。',collab:'在有能見度和影響力的角色中最能發揮。幕後工作讓你的能量流失。',reach:'讓它關於影響和遺產，而不只是工作。你想要做值得被記住的事。',stress:'當被忽視或職業成長受限時失去動力。需要被看見和被挑戰。',motivation:'認可、影響力和做有意義的重要事情讓你保持最高能量。'},
+  Virgo:      {disc:'C型（謹慎）',mbti:'INTJ / ISTJ',style:'分析型、精準、以品質為驅動。你的標準比大多數人高，而且你知道為什麼。',collab:'在有清晰標準和自主權的環境中表現最佳。模糊讓你焦慮。',reach:'用數據、邏輯和具體例子和你溝通。跳過表面，直接進入細節。',stress:'完美主義在截止日期面前變成瓶頸。學會區分「必須完美」和「夠好就可以」。',motivation:'精確性、品質和有意義的貢獻讓你保持高度投入。'},
+  Libra:      {disc:'I型（影響）/ S型（穩定）',mbti:'ENFJ / ESFJ',style:'以和諧為導向、外交家、直覺地尋求共識。你讓每個人都感到被聽見。',collab:'在協作的環境中茁壯成長，衝突讓你消耗能量。',reach:'用合作和共同利益的語言，避免對抗性的框架。',stress:'決策困難讓你在壓力下癱瘓。練習設定決策截止時間。',motivation:'和諧、合作和貢獻讓他人感到被支持讓你保持動力。'},
+  Scorpio:    {disc:'D型（主導）/ C型（謹慎）',mbti:'INTJ / INFJ',style:'戰略型、有深度、以結果為導向。你的洞察力往往讓他人感到不安，因為你看得太清楚了。',collab:'在有自主權和真實透明度的環境中表現最佳。你對表面文章沒有耐心。',reach:'跳過客套，直接進入實質。你尊重那些有準備而來、不浪費你時間的人。',stress:'不信任和政治環境讓你把能量用在防禦上，而不是創造上。',motivation:'深度、自主權和真正有影響力的工作讓你全力投入。'},
+  Sagittarius:{disc:'D型（主導）/ I型（影響）',mbti:'ENTP / ENFP',style:'有遠見、熱情、天生的大格局思考者。你對可能性的熱情是傳染性的。',collab:'在有自由度和多樣性的環境中茁壯成長。細節工作讓你失去能量。',reach:'從宏大的格局開始，讓細節在後面填補。你需要先看到全圖才能投入。',stress:'無聊和過度限制讓你的能量迅速流失。需要多樣性和挑戰保持最佳狀態。',motivation:'探索、多樣性和做真正重要的有意義的事讓你保持高能量。'},
+  Capricorn:  {disc:'D型（主導）/ C型（謹慎）',mbti:'INTJ / ISTJ',style:'結果導向、紀律嚴明、長線思考者。你把目標當成必須實現的事，不是可能實現的事。',collab:'在有清晰標準和結構的環境中表現最佳。模糊對你是一種浪費。',reach:'用數據、結果和長期影響和你溝通。你對空話沒有耐心。',stress:'完美標準在截止日期面前造成摩擦。學會區分長線標準和短期執行。',motivation:'進步、可量化的成果和往有意義的長期目標前進讓你保持動力。'},
+  Aquarius:   {disc:'C型（謹慎）/ I型（影響）',mbti:'INTP / ENTP',style:'革新型、獨立、以系統思維見長。你天生看見大多數人習以為常的假設。',collab:'在有智識多樣性和創新空間的環境中茁壯成長。官僚主義讓你失去動力。',reach:'用概念和系統改變的語言吸引你，而不是程序或傳統。',stress:'當被迫適應你認為低效的系統時感到挫敗。學會在推動改變的同時和現有系統共存。',motivation:'智識挑戰、創新和對更大系統造成真正影響讓你全力投入。'},
+  Pisces:     {disc:'S型（穩定）/ I型（影響）',mbti:'INFP / ENFP',style:'有創意、有同理心、直覺導向。你在深度的人際連結和有意義的創作中找到動力。',collab:'在有創意空間和真實支持的環境中最能發揮。過度結構化讓你窒息。',reach:'建立真實的情感連結，然後再討論工作細節。你需要先感受到被理解。',stress:'衝突和過度批評讓你退縮。需要被鼓勵和被支持才能全力投入。',motivation:'有意義的創作、真實的連結和感覺自己在貢獻某個比工作更大的東西讓你茁壯。'}
 };
 
 // 5. Elemental Strategy — Plum Blossom Numerology (8 Trigrams × 生肖)
 var MEIHUA_DB = {
-  Rat:    {gua:'坎 ☵',name:'The Abyss',nature:'Water: Deep, adaptive, dangerous if underestimated.',career:'You\'re the deep strategist. Your power is in what you know that others don\'t. Information, timing, and patience are your career weapons.',timing:'Winter · Q4 · End-cycles',hr:'Sis\'s read: You win by knowing more. Invest in your information network as deliberately as your skill set.'},
-  Ox:     {gua:'艮 ☶',name:'The Mountain',nature:'Earth: Immovable, enduring, the foundation everything rests on.',career:'Your reliability is your brand. Organizations pivot around you without noticing. Your consistency is compound interest that eventually makes you irreplaceable.',timing:'Late Winter · Consolidation phases',hr:'Sis\'s read: Mountain energy is invisible until it\'s gone. Document your contributions and make your consistency legible to decision-makers.'},
-  Tiger:  {gua:'震 ☳',name:'Thunder',nature:'Wood: Initiating force. The shock that wakes things up.',career:'You\'re the activating energy. Projects stall before you arrive and move after you do. Your career moments happen at inflection points.',timing:'Spring · Q1 launches · Organizational shifts',hr:'Sis\'s read: Thunder Tiger energy is extraordinary in the right season. Map your industry\'s cycles and position yourself at the inflection points.'},
-  Rabbit: {gua:'巽 ☴',name:'Wind',nature:'Wood: Penetrating, subtle, persistent. Gets through where force cannot.',career:'You achieve through influence, not authority. You change minds without anyone noticing the change happened.',timing:'Spring/Early Summer · Consensus-building',hr:'Sis\'s read: What looks like agreeableness is sophisticated influence. Own that — it\'s strategic, not soft.'},
-  Dragon: {gua:'乾 ☰',name:'Heaven',nature:'Metal: Creative force. The great initiating energy.',career:'You\'re built for leadership at scale. Your energy is most powerful when the stakes are highest.',timing:'Late Spring/Summer · Peak energy periods',hr:'Sis\'s read: Heaven Dragon energy needs real authority to function. A title without genuine decision-making power frustrates and disengages you. Clarify scope before accepting any role.'},
-  Snake:  {gua:'離 ☲',name:'Fire',nature:'Fire: Illuminating, precise. The light that reveals what\'s hidden.',career:'You see through to the core of things. Your strategic clarity is rare — you identify the real problem when others are solving the surface one.',timing:'Summer · High-activity periods',hr:'Sis\'s read: Fire Snake energy is exceptional in advisory and strategic roles. Your ceiling rises when you move from doing to illuminating.'},
-  Horse:  {gua:'離 ☲',name:'Fire — Motion',nature:'Fire: Energetic, expansive, action-oriented.',career:'You thrive in motion. Travel, cross-functional work, client-facing roles — anything that puts you in front of new environments and new people.',timing:'Summer · Fast-moving markets',hr:'Sis\'s read: Fire Horse energy goes flat in static environments. If you\'ve been in the same role for three years without significant evolution, that\'s stagnation. Redesign or relocate.'},
-  Goat:   {gua:'坤 ☷',name:'Earth',nature:'Earth: Receptive, nourishing. Receives and transforms.',career:'You\'re the culture-builder. Your output is felt more than measured.',timing:'Late Summer · Team achievements',hr:'Sis\'s read: Learn to translate your relational contributions into business language. "I increased team retention by X%" is more legible than "I keep the culture healthy."'},
-  Monkey: {gua:'兌 ☱',name:'Lake',nature:'Metal: Joyful, reflective, communicative. The surface that gathers and reflects.',career:'You\'re the connector. Ideas, people, resources — you find the combination that others miss.',timing:'Autumn · Harvesting · Bringing together',hr:'Sis\'s read: Lake Monkey energy is phenomenal in networked roles. If you\'re siloed, you\'re being wasted. Push for cross-functional exposure.'},
-  Rooster:{gua:'兌 ☱',name:'Lake — Precision',nature:'Metal: Precise, detail-oriented. The lake that reflects truth.',career:'You\'re the quality signal in your environment. Your standards set the bar without you having to say a word.',timing:'Autumn · Review periods · 參考inement phases',hr:'Sis\'s read: You don\'t just maintain standards — you raise them. Make that explicit. Track the before/after.'},
-  Dog:    {gua:'乾 ☰',name:'Heaven — Guardian',nature:'Metal: Loyal, principled, protective.',career:'You\'re the ethical anchor of any team. When things get murky, people look to you to calibrate what\'s acceptable.',timing:'Late Autumn · Accountability reviews',hr:'Sis\'s read: When the culture is misaligned, you suffer disproportionately — and you\'re usually the first to know. Trust that signal.'},
-  Pig:    {gua:'坎 ☵',name:'Abyss — Abundance',nature:'Water: Generous, deep. The reservoir that gives freely.',career:'Your generosity of time, knowledge, and support creates loyalty networks most professionals can\'t build deliberately.',timing:'Winter · Year-end · Relationship-deepening',hr:'Sis\'s read: Generosity you can\'t articulate is generosity that can\'t be compensated. Start noting your contributions explicitly.'}
+  Rat:    {energy:'坎卦 · 流動之水',timing:'智慧在等待中積累，然後一鼓作氣。等待合適的時機，然後果斷出手。',move:'深化你的核心專業知識。流動的水最終能穿石，但它需要方向。',warn:'避免分散。水的力量在於聚焦，不在漫流。',hr:'姐說：你的適應力是天賦。給它一個清晰的方向，你的影響力將遠超你的想像。'},
+  Ox:     {energy:'坤卦 · 厚德之土',timing:'穩定的積累勝過閃耀的爆發。這是深根的時節，不是表演的時節。',move:'鞏固你的基礎。確保你的核心系統和關係是健康的。',warn:'避免在還沒準備好的情況下承擔太多。',hr:'姐說：你的可靠性是組織的基石。讓它在最需要穩定的時刻閃光。'},
+  Tiger:  {energy:'震卦 · 雷動之木',timing:'行動的時機已到。那股能量在你體內積累夠久了——現在是打破現狀的時候。',move:'啟動那個你一直在計劃的項目，召集你需要的人。',warn:'在激情中保持判斷力。雷動之後需要落地的方向。',hr:'姐說：你的爆發力在正確的時機是無可阻擋的。確保這個時機值得你全力以赴。'},
+  Rabbit: {energy:'巽卦 · 柔風之木',timing:'溫和而持續的影響勝過單次的爆發。這週讓你的存在力漫延，而不是衝擊。',move:'通過溝通和關係建立影響力。你的話語比你想像的更有力量。',warn:'避免過度順從。溫柔不等於沒有立場。',hr:'姐說：你的柔性力量在需要說服而不是強迫的時刻無可匹敵。'},
+  Dragon: {energy:'乾卦 · 天行之金',timing:'能量在高點。宏大的行動和重要的決策在這個時節有強大的支持。',move:'推進你的核心目標。現在不是時候保守。',warn:'謙遜是力量的一部分。最強的能量仍然需要適當的時機。',hr:'姐說：你的時機到了。全力以赴，但記得帶著謙遜同行。'},
+  Snake:  {energy:'離卦 · 明火之光',timing:'清晰和洞察力在這個時節是你最強的資產。看清楚，然後說清楚。',move:'分享你的洞察和願景。你看見的東西值得被說出來。',warn:'避免讓完美主義阻止你分享還不完整的洞見。',hr:'姐說：你的洞察力是稀缺的。把它大聲說出來，即使你還沒準備好。'},
+  Horse:  {energy:'乾卦 · 天行之金',timing:'動力和方向對齊的時刻。把你的能量投入最重要的方向。',move:'集中你的行動力在一個核心目標上，而不是分散。',warn:'速度需要方向，否則只是快速迷失。',hr:'姐說：你的行動力是天賦。確保它往值得你全力奔跑的方向前進。'},
+  Goat:   {energy:'坤卦 · 厚德之土',timing:'滋養和照顧的時節。把能量投入在維護你最重要的關係和環境。',move:'深化你最重要的職場關係。在你索取之前先給予。',warn:'避免忽略自己的需求，一直付出而不補充。',hr:'姐說：你的照顧能力是珍貴的。先照顧好自己，你才能持續照顧別人。'},
+  Monkey: {energy:'兌卦 · 悅澤之金',timing:'溝通和連結的高峰期。用你的魅力打開對的門。',move:'進行那些你一直推遲的重要對話和連結。',warn:'避免把機智用在表面的社交，而忽略深度的連結。',hr:'姐說：你的溝通天賦在這個時節特別強大。用它打開你真正想要的門。'},
+  Rooster:{energy:'離卦 · 明火之光',timing:'精準和品質在這個時節特別有力量。讓你的標準成為你的品牌。',move:'把一個重要的工作打磨到讓你真正滿意的程度，然後讓它被看見。',warn:'避免讓完美主義成為發布的阻礙。',hr:'姐說：你的精準度是天賦。在正確的舞台上展示它。'},
+  Dog:    {energy:'艮卦 · 靜止之土',timing:'停下來，評估你的方向。這是反思而不是行動的時節。',move:'誠實評估你目前的路徑是否仍然與你的核心價值一致。',warn:'避免為了行動而行動。有時暫停是最重要的行動。',hr:'姐說：你的忠誠是稀缺的品質。確保你把它給了值得的人和事。'},
+  Pig:    {energy:'坎卦 · 流動之水',timing:'直覺比邏輯更可靠的時節。相信你的內在感知。',move:'做那個你心裡早就知道答案、但一直用邏輯說服自己的決定。',warn:'避免被表面的情況迷惑，你的深層感知往往更準確。',hr:'姐說：你的直覺是你最強的導航工具。在這個時節，讓它帶路。'}
 };
 
 // 6. Command Field — Qi Men Dun Jia (Strategic Positioning · 九宮八門)
 var QIMEN_DB = {
-  Aries:      {gate:'開門 Open Gate',palace:'Heaven Palace · 6',nature:'The gate of expansion and bold beginnings.',strategy:'You\'re aligned with initiation energy. The best timing for career moves and negotiations is when you act from this gate — bold, clear, committed.',caution:'Opening without a plan dissipates the energy. Clarity of intention before action.',hr:'Sis\'s read: The question isn\'t whether to make the move — it\'s whether you\'ve defined what success looks like when you land.'},
-  Taurus:     {gate:'休門 Rest Gate',palace:'Water Palace · 1',nature:'The gate of recovery, planning, and strategic withdrawal.',strategy:'Your power is in strategic patience. You make better decisions from a rested, resourced state than from urgency.',caution:'Rest that becomes avoidance. Know the difference between wisdom and delay.',hr:'Sis\'s read: Your competitors are burning out while you\'re preparing. That\'s not slow — that\'s strategic convalescing.'},
-  Gemini:     {gate:'生門 Life Gate',palace:'Mountain Palace · 8',nature:'The gate of growth, resources, and abundance.',strategy:'Positioned for resource generation. Business development, revenue growth, team scaling — these align with your gate energy.',caution:'Growth for its own sake without direction.',hr:'Sis\'s read: If you\'re in a role that doesn\'t reward growth and creation, you\'re fighting your own gate. Reposition.'},
-  Cancer:     {gate:'傷門 Wound Gate',palace:'Thunder Palace · 3',nature:'The gate of breakthroughs and necessary disruption.',strategy:'Your career breakthroughs happen through disruption. The moments that hurt are often the gates to your next level.',caution:'Staying in the wound rather than moving through it.',hr:'Sis\'s read: The pain signal is telling you where the next level is. Follow it — don\'t camp there.'},
-  Leo:        {gate:'杜門 Block Gate',palace:'Wind Palace · 4',nature:'The gate of concealment and strategic observation.',strategy:'Your power move is sometimes to step back and let others reveal themselves. Not everything requires your presence.',caution:'Blocking becoming hiding. Concealment that becomes invisibility.',hr:'Sis\'s read: Sometimes the most powerful thing you can do is not be in the room. Send the idea without your name on it. Watch what happens.'},
-  Virgo:      {gate:'景門 View Gate',palace:'Fire Palace · 9',nature:'The gate of clarity, recognition, and illumination.',strategy:'Your career power is in making the invisible visible — data, patterns, inefficiencies, truths.',caution:'Analysis without action. The view is not the destination.',hr:'Sis\'s read: Your clarity is the asset. 查詢 the role that lets you show what you see — reporting, presentations, stakeholder updates.'},
-  Libra:      {gate:'死門 Death Gate',palace:'Earth Palace · 2',nature:'The gate of completion, endings, and transformation.',strategy:'Your energy is most powerful in transitions — ending what\'s finished so new things can begin.',caution:'Death gate means completion, not failure. Don\'t confuse an ending with a loss.',hr:'Sis\'s read: You\'re extraordinarily valuable in change management. You can facilitate endings with dignity. Organizations pay well for that.'},
-  Scorpio:    {gate:'驚門 Shock Gate',palace:'Lake Palace · 7',nature:'The gate of surprise, sudden revelation, and strategic disruption.',strategy:'Your best moves often surprise even you. Insights that arrive suddenly are often your most accurate.',caution:'Shock for its own sake. Distinguish disruption that creates value from disruption that creates noise.',hr:'Sis\'s read: Used deliberately, Shock Gate energy is extraordinary. The move is to distinguish between disruption that creates value and disruption that just creates noise.'},
-  Sagittarius:{gate:'開門 Open Gate',palace:'Heaven Palace · 6',nature:'The gate of expansion, travel, and new territories.',strategy:'Built to go beyond current boundaries — geographically, conceptually, organizationally.',caution:'Opening too many gates at once. Expansion needs focus to compound.',hr:'Sis\'s read: If you\'re not growing your scope, you\'re contracting. That restlessness isn\'t immaturity — it\'s your gate calling.'},
-  Capricorn:  {gate:'休門 Rest Gate',palace:'Water Palace · 1',nature:'The gate of strategic restoration and long-term planning.',strategy:'Every great Capricorn career is built on deliberate, patient positioning.',caution:'Patience that becomes passivity. Rest that becomes procrastination.',hr:'Sis\'s read: In a world of quarters, you\'re thinking in years. That\'s your competitive edge. Protect it from short-term pressure.'},
-  Aquarius:   {gate:'生門 Life Gate',palace:'Mountain Palace · 8',nature:'The gate of innovation and new resource creation.',strategy:'Positioned to build new things and generate new forms of value. The conventional path is rarely your highest-yield path.',caution:'Innovation without sustainability. Vision needs grounding.',hr:'Sis\'s read: 查詢 the partner or system that grounds your innovation. That combination is worth significantly more than either alone.'},
-  Pisces:     {gate:'傷門 Wound Gate',palace:'Thunder Palace · 3',nature:'The gate of creative breakthrough through authentic feeling.',strategy:'Most profound insights arrive through emotional truth, not analytical process.',caution:'Getting lost in the feeling and missing the gateway. Feel it — then move through it.',hr:'Sis\'s read: Protect your authenticity in environments that commercialize it. Know the difference between a collaborator and an extractor.'}
+  Aries:      {pos:'開門 · 行動之位',season:'啟動新計畫的最佳時節，行動的能量支持大膽的開始。',move:'立刻啟動那個你一直在準備的行動。等待的代價現在比失敗的代價高。',avoid:'過度計劃而不行動，消耗了啟動的能量。',hr:'姐說：這是你的起跑線。起跑了。'},
+  Taurus:     {pos:'休門 · 積蓄之位',season:'積蓄和深根的時節，不是表演的時節。',move:'把能量投入在你最重要的核心能力上，悄悄積累。',avoid:'急於展示成果而打亂積累的節奏。',hr:'姐說：最好的表演來自最深的準備。這是準備的時節。'},
+  Gemini:     {pos:'生門 · 創造之位',season:'創意和新連結的能量最高點。',move:'把那個創意想法帶入現實的第一步，找到願意一起實現它的人。',avoid:'只停留在想法層面而不採取具體行動。',hr:'姐說：創意在行動中才能活著。今天就給它一個具體的第一步。'},
+  Cancer:     {pos:'傷門 · 突破之位',season:'打破舊模式、推進停滯已久的事物的時節。',move:'面對那個你一直在迴避的困難對話或決定。',avoid:'因為不舒服而繼續迴避，讓問題複利增長。',hr:'姐說：這個門是讓你突破的，不是讓你受傷的。走過去。'},
+  Leo:        {pos:'杜門 · 隱蔽之位',season:'戰略性沉默和秘密準備的時節。',move:'悄悄地為下一個大行動做準備，不要預告你的計畫。',avoid:'過早展示你的牌，在準備好之前就曝光。',hr:'姐說：最有力量的棋手不告訴對手他下一步要走哪裡。'},
+  Virgo:      {pos:'景門 · 揚名之位',season:'讓你的工作被看見的最佳時節。',move:'主動分享一個你最近完成的重要成果，讓對的人知道。',avoid:'過於謙遜而讓你的成果在雜訊中消失。',hr:'姐說：好工作需要能見度才能變成機會。今天讓它被看見。'},
+  Libra:      {pos:'死門 · 轉化之位',season:'結束舊循環、清理不再服務你的事物的時節。',move:'結束那個你知道已經走到終點的項目、關係或習慣。',avoid:'因為情感依附而延長已經走完的週期。',hr:'姐說：乾淨的結束是下一個開始的前提。'},
+  Scorpio:    {pos:'驚門 · 震動之位',season:'打破現狀、製造戰略性衝擊的時節。',move:'以出乎意料的方式出手，讓觀眾措手不及。',avoid:'可預測的行動，讓對手提前準備。',hr:'姐說：這是打破僵局的時機。用意想不到的方式出手。'},
+  Sagittarius:{pos:'開門 · 行動之位',season:'探索和擴張的能量特別強的時節。',move:'把一個你一直想嘗試的方向邁出第一步，不要等條件完美。',avoid:'因為不確定性而選擇停留在安全地帶。',hr:'姐說：你的下一個大冒險從今天的第一步開始。'},
+  Capricorn:  {pos:'休門 · 積蓄之位',season:'戰略性積累和鞏固的時節，比行動更重要。',move:'把那些重要但不緊急的基礎工作推進，為下一個衝刺做準備。',avoid:'被緊急但不重要的事情佔據，忽略真正重要的建設。',hr:'姐說：你在建造的東西需要深根。這是打地基的時節。'},
+  Aquarius:   {pos:'生門 · 創造之位',season:'革新想法和突破性思維最受支持的時節。',move:'把那個你覺得「太超前」的想法提出來測試。',avoid:'把想法一直壓在心裡，等待一個永遠不會來的完美時機。',hr:'姐說：先行者總是顯得太超前。把它說出來，讓世界跟上你。'},
+  Pisces:     {pos:'景門 · 揚名之位',season:'直覺和創意影響力特別強大的時節。',move:'把你的創意工作帶到更大的舞台，即使你覺得還沒準備好。',avoid:'因為害怕被誤解而選擇保持沉默。',hr:'姐說：你的創意需要被看見才能影響世界。今天讓它出去見人。'}
 };
 
 // Lookup functions
@@ -2747,7 +2747,7 @@ function doAnalyze(){
   // 6 Wisdom Systems
   var birthYear=parseInt(document.getElementById('by').value);
   var ziwei=getZiweiReading(z),numReading=getNumerologyReading(birthYear),tarot=getTarotReading(z),disc=getDISCReading(z),meihua=getMeihuaReading(a),qimen=getQimenReading(z);
-  var wsSystems=[{id:'ziwei',label:'Star 藍圖™'},{id:'num',label:'Life Code™'},{id:'tarot',label:'Archetype Lens™'},{id:'disc',label:'Behavior Matrix™'},{id:'meihua',label:'Energy Gate™'},{id:'qimen',label:'Command Field™'}];
+  var wsSystems=[{id:'ziwei',label:'命格星圖™'},{id:'num',label:'生命密碼™'},{id:'tarot',label:'原型透鏡™'},{id:'disc',label:'行為矩陣™'},{id:'meihua',label:'能量閘口™'},{id:'qimen',label:'制令場™'}];
   document.getElementById('ws-tabs').innerHTML=wsSystems.map(function(s,i){return '<button class="ws-tab'+(i===0?' act':'')+'" onclick="wsSwitch(\"'+s.id+'\")" id="wstab-'+s.id+'">'+s.label+'</button>';}).join('');
   // Build wisdom panels
   function mkItem(label, val){ return '<div class="ws-item"><div class="tl">'+label+'</div><div class="tv">'+val+'</div></div>'; }
@@ -2762,40 +2762,40 @@ function doAnalyze(){
 
   // Panel 1: Star 藍圖™
   if(ziwei){
-    var zHtml = mkLabel('Star 藍圖™ · Career Archetype') +
+    var zHtml = mkLabel('命格星圖™ · 職場原型') +
       mkArch(ziwei.arch) +
-      mkSub('Career Intelligence System') +
-      mkRow(mkItem('Core Strength', ziwei.s), mkItem('Blind Spot', ziwei.b)) +
+      mkSub('職場智慧系統') +
+      mkRow(mkItem('核心優勢', ziwei.s), mkItem('職場盲點', ziwei.b)) +
       mkHR(ziwei.hr);
     panels += mkPanel('ziwei', true, zHtml);
   }
 
   // Panel 2: Life Code™
   var nd = numReading.data;
-  var nHtml = mkLabel('Life Code™ · Path Number ' + numReading.num) +
+  var nHtml = mkLabel('生命密碼™ · 生命靈數 ' + numReading.num) +
     mkArch(nd.path) +
-    mkRow(mkItem('Career Direction', nd.career), mkItem('Shadow Side', nd.shadow)) +
-    mkItem('Core Strength', nd.strength) +
+    mkRow(mkItem('職涯方向', nd.career), mkItem('陰影面', nd.shadow)) +
+    mkItem('核心優勢', nd.strength) +
     mkHR(nd.hr);
   panels += mkPanel('num', false, nHtml);
 
   // Panel 3: Archetype Lens™
   if(tarot){
-    var tHtml = mkLabel('Archetype Lens™ · ' + tarot.card) +
+    var tHtml = mkLabel('原型透鏡™ · ' + tarot.card) +
       mkArch(tarot.arch) +
-      mkRow(mkItem('Career Power', tarot.power), mkItem('Core Lesson', tarot.lesson)) +
-      mkItem('Career Direction', tarot.career) +
+      mkRow(mkItem('職場力量', tarot.power), mkItem('核心課題', tarot.lesson)) +
+      mkItem('職涯方向', tarot.career) +
       mkHR(tarot.hr);
     panels += mkPanel('tarot', false, tHtml);
   }
 
   // Panel 4: Behavior Matrix™
   if(disc){
-    var dHtml = mkLabel('Behavior Matrix™ · Work Style Profile') +
+    var dHtml = mkLabel('行為矩陣™ · 工作風格') +
       mkArch(disc.disc) +
-      mkSub('Profile: ' + disc.mbti) +
-      mkRow(mkItem('Work Style', disc.style), mkItem('Collaboration', disc.collab)) +
-      mkRow(mkItem('How to Reach You', disc.receive), mkItem('Under Conflict', disc.conflict)) +
+      mkSub('人格類型：' + disc.mbti) +
+      mkRow(mkItem('工作風格', disc.style), mkItem('合作方式', disc.collab)) +
+      mkRow(mkItem('如何溝通', disc.receive), mkItem('Under Conflict', disc.conflict)) +
       mkHR(disc.hr);
     panels += mkPanel('disc', false, dHtml);
   }
@@ -3112,14 +3112,37 @@ function applyTier(){
 }
 
 
+
 // ── 問姐 諮詢 ──
 var _chatSession = {active:false, qUsed:0, qMax:0, timer:null, timeLeft:0, context:''};
 
+function _getChatMonthKey(){ var d=new Date(); return d.getFullYear()+'-'+(d.getMonth()+1); }
+function _getChatCooldownKey(){ return 'sis_cd'; }
+function _getChatUsageKey(){ return 'sis_usage_'+_getChatMonthKey(); }
+
 function openSisChat(){
   if(!gte('silver')){alert('升級銀牌或金牌才能使用諮詢功能。');return;}
+
+  // Check monthly usage
   var maxQ = gte('gold') ? 3 : 1;
-  _chatSession = {active:true, qUsed:0, qMax:maxQ, timer:null, timeLeft:300, context:''};
-  
+  var usedThisMonth = parseInt(window.sessionStorage ? (sessionStorage.getItem(_getChatUsageKey())||'0') : '0');
+
+  if(usedThisMonth >= maxQ){
+    var msg = gte('gold') ? '本月金牌諮詢次數已用完（每月3次）。下個月再來。' : '本月銀牌諮詢次數已用完（每月1次）。升級金牌可獲得更多次數。';
+    alert(msg); return;
+  }
+
+  // Check 20-min cooldown (hidden)
+  var lastSession = parseInt(window.sessionStorage ? (sessionStorage.getItem(_getChatCooldownKey())||'0') : '0');
+  var now = Date.now();
+  if(lastSession > 0 && (now - lastSession) < 20*60*1000){
+    var waitMin = Math.ceil((20*60*1000 - (now - lastSession)) / 60000);
+    alert('請稍等 '+waitMin+' 分鐘後再次諮詢。');
+    return;
+  }
+
+  _chatSession = {active:true, qUsed:0, qMax:maxQ - usedThisMonth, timer:null, timeLeft:300, context:''};
+
   var z1=document.getElementById('p1z').value;
   var a1=document.getElementById('p1a').value;
   var z2=document.getElementById('p2z').value;
@@ -3128,7 +3151,7 @@ function openSisChat(){
     ? '當前配對：您（'+z1+'×'+a1+'）與'+z2+'×'+a2+'的職場關係。'
     : '一般職場人際問題諮詢。';
   _chatSession.context = ctx;
-  
+
   document.getElementById('chat-context').textContent = ctx;
   document.getElementById('chat-messages').innerHTML = '';
   document.getElementById('chat-input').value = '';
@@ -3146,6 +3169,8 @@ function openSisChat(){
 function closeSisChat(){
   if(_chatSession.timer) clearInterval(_chatSession.timer);
   _chatSession.active = false;
+  // Record cooldown start time
+  if(window.sessionStorage) sessionStorage.setItem(_getChatCooldownKey(), Date.now().toString());
   document.getElementById('sis-chat-modal').style.display='none';
 }
 
@@ -3158,7 +3183,8 @@ function startChatTimer(){
     updateTimerDisplay();
     if(_chatSession.timeLeft <= 0){
       clearInterval(_chatSession.timer);
-      endChatSession('時間到！您的5分鐘諮詢時間已結束。');
+      if(window.sessionStorage) sessionStorage.setItem(_getChatCooldownKey(), Date.now().toString());
+      endChatSession('時間到！本次諮詢已結束。感謝您諮詢姐。');
     }
   }, 1000);
 }
@@ -3166,23 +3192,19 @@ function startChatTimer(){
 function updateTimerDisplay(){
   var m = Math.floor(_chatSession.timeLeft/60);
   var s = _chatSession.timeLeft % 60;
-  document.getElementById('chat-timer-display').textContent = 
+  document.getElementById('chat-timer-display').textContent =
     '剩餘時間：' + m + '分' + (s<10?'0':'') + s + '秒';
 }
 
 function updateChatUI(){
   var remaining = _chatSession.qMax - _chatSession.qUsed;
-  document.getElementById('chat-q-remaining').textContent = 
-    '剩餘' + remaining + '個問題';
-  var label = gte('gold')
-    ? '金牌：每次'+_chatSession.qMax+'問 · 5分鐘'
-    : '銀牌：每次1問 · 5分鐘';
-  document.getElementById('chat-quota-label').textContent = label;
+  document.getElementById('chat-q-remaining').textContent = '剩餘' + remaining + '問';
 }
 
 function endChatSession(msg){
   _chatSession.active = false;
   if(_chatSession.timer) clearInterval(_chatSession.timer);
+  if(window.sessionStorage) sessionStorage.setItem(_getChatCooldownKey(), Date.now().toString());
   document.getElementById('chat-input-area').style.display='none';
   document.getElementById('chat-done-msg').style.display='block';
   document.getElementById('chat-done-msg').textContent = msg;
@@ -3219,23 +3241,32 @@ function removeTypingIndicator(){
 async function sendSisChat(){
   if(!_chatSession.active){return;}
   if(_chatSession.qUsed >= _chatSession.qMax){
-    endChatSession('本次諮詢問題已用完。升級金牌可獲得更多提問次數。');
-    return;
+    var remaining = _chatSession.qMax - _chatSession.qUsed;
+    if(remaining <= 0){
+      endChatSession('本次諮詢問題已用完。感謝您諮詢姐。');
+      return;
+    }
   }
   var q = document.getElementById('chat-input').value.trim();
   if(!q){return;}
-  
+
   _chatSession.qUsed++;
+  // Record monthly usage
+  if(window.sessionStorage){
+    var used = parseInt(sessionStorage.getItem(_getChatUsageKey())||'0');
+    sessionStorage.setItem(_getChatUsageKey(), (used+1).toString());
+  }
+
   document.getElementById('chat-input').value='';
   document.getElementById('chat-char-count').textContent='0 / 500';
   document.getElementById('chat-send-btn').disabled=true;
   addChatMsg('user', q);
   updateChatUI();
   addTypingIndicator();
-  
+
   try{
     var systemPrompt = '你是「姐」，一位擁有20年美國HR實戰經驗的職場顧問。你專精於職場人際關係、職場政治與職場策略。你的風格：直接、實用、有溫度，不說廢話。回覆控制在150字以內，用繁體中文，並且一定要以一個今天就能執行的具體行動作為結尾。背景資訊：' + _chatSession.context;
-    
+
     var response = await fetch('https://api.anthropic.com/v1/messages', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -3246,14 +3277,14 @@ async function sendSisChat(){
         messages:[{role:'user',content:q}]
       })
     });
-    
+
     var data = await response.json();
     removeTypingIndicator();
     var reply = data.content && data.content[0] ? data.content[0].text : '連線異常，請稍後再試。';
     addChatMsg('sis', reply);
-    
+
     if(_chatSession.qUsed >= _chatSession.qMax){
-      endChatSession('本次諮詢問題已用完。升級金牌可獲得更多提問次數。');
+      endChatSession('本月諮詢次數已用完。感謝您諮詢姐。');
     } else {
       document.getElementById('chat-send-btn').disabled=false;
       document.getElementById('chat-input').focus();
@@ -3264,6 +3295,7 @@ async function sendSisChat(){
     document.getElementById('chat-send-btn').disabled=false;
   }
 }
+
 
 // INIT
 initToday();
