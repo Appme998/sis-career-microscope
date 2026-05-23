@@ -3012,6 +3012,18 @@ function doAnalyze(){
 
   document.getElementById('ws-content').innerHTML=panels;
   applyTier();
+  // 強制顯示智慧系統（銀牌以上）
+  if(gte('silver')){
+    var wf=document.getElementById('res-wisdom-full');
+    var wl=document.getElementById('res-wisdom-lock');
+    if(wf)wf.style.display='block';
+    if(wl)wl.style.display='none';
+    // 確保第一個 tab 顯示
+    var firstPanel=document.getElementById('wsp-ziwei');
+    if(firstPanel)firstPanel.classList.add('act');
+    var firstTab=document.getElementById('wstab-ziwei');
+    if(firstTab)firstTab.classList.add('act');
+  }
   // 金牌今日幸運
   renderLuckyGold(z, a);
   document.getElementById('res-panel').style.display='block';
